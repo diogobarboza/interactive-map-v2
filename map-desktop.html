@@ -94,7 +94,7 @@ google.charts.setOnLoadCallback(drawVisualization);
  ivalue['BR-RR'] = '';
 
  var options = {
- backgroundColor: {fill:'#E9EDF0',stroke:'#E9EDF0' ,strokeWidth:0 },
+ backgroundColor: {fill:'transparent',stroke:'#E9EDF0' ,strokeWidth:0 },
  colorAxis:  {minValue: 0, maxValue: 26,  colors: ['#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB']},
  legend: 'none',	
  datalessRegionColor: '#E9EDF0',
@@ -106,12 +106,21 @@ google.charts.setOnLoadCallback(drawVisualization);
  keepAspectRatio: true,
  width:800,
  height:700,
- tooltip: {textStyle: {color: '#095186'}, trigger:'focus', isHtml: true}	
+ tooltip: {textStyle: {color: '#095186'}, trigger:'focus', isHtml: true}
  };
   var chart = new google.visualization.GeoChart(document.getElementById('map_1731522800590')); 
  chart.draw(data, options);
  }
  </script>
+ <style>
+   #map_1731522800590 path {
+      stroke-width: 1;
+      stroke: #E9EDF0;
+    }
+    #map_1731522800590 path:not([fill^="#f5f5f5"]):hover {
+      fill: #095186;
+    }
+ </style>
  <style>
    p {
      font-family: Arial, sans-serif;
@@ -120,5 +129,3 @@ google.charts.setOnLoadCallback(drawVisualization);
    }
  </style>
  <div id='map_1731522800590'></div>
-
-
