@@ -1,1 +1,124 @@
 
+<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script> 
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.charts.load('42', {'packages':['geochart']});
+google.charts.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value'); 
+ data.addColumn({type:'string', role:'tooltip', p:{html:true}});var ivalue = new Array();
+
+ data.addRows([[{v:'BR-RS',f:'Rio Grande do Sul'},0,'<p><b>ZP Representações LTDA</b><br>Renato Zaffari<br>Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br>Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a></p>']]);
+ ivalue['BR-RS'] = '';
+
+ data.addRows([[{v:'BR-SC',f:'Santa Catarina'},1,'<p><b>ZP Representações LTDA</b><br>Renato Zaffari<br>Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br>Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a></p>']]);
+ ivalue['BR-SC'] = '';
+
+ data.addRows([[{v:'BR-PR',f:'Paraná'},2,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a></p>']]);
+ ivalue['BR-PR'] = '';
+
+ data.addRows([[{v:'BR-SP',f:'São Paulo'},3,'<p><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-SP'] = '';
+
+ data.addRows([[{v:'BR-RJ',f:'Rio de Janeiro'},4,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-RJ'] = '';
+
+ data.addRows([[{v:'BR-ES',f:'Espírito Santo'},5,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-ES'] = '';
+
+ data.addRows([[{v:'BR-BA',f:'Bahia'},6,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-BA'] = '';
+
+ data.addRows([[{v:'BR-GO',f:'Goiás'},7,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-GO'] = '';
+
+ data.addRows([[{v:'BR-MG',f:'Minas Gerais'},8,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-MG'] = '';
+
+ data.addRows([[{v:'BR-DF',f:'Distrito Federal'},9,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-DF'] = '';
+
+ data.addRows([[{v:'',f:''},10,'']]);
+ ivalue[''] = '';
+
+ data.addRows([[{v:'BR-MT',f:'Mato Grosso'},11,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-MT'] = '';
+
+ data.addRows([[{v:'BR-MS',f:'Mato Grosso do Sul'},12,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-MS'] = '';
+
+ data.addRows([[{v:'BR-TO',f:'Tocantins'},13,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-TO'] = '';
+
+ data.addRows([[{v:'BR-RO',f:'Rondônia'},14,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-RO'] = '';
+
+ data.addRows([[{v:'BR-AC',f:'Acre'},15,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-AC'] = '';
+
+ data.addRows([[{v:'BR-AL',f:'Alagoas'},16,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-AL'] = '';
+
+ data.addRows([[{v:'BR-AP',f:'Amapá'},17,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-AP'] = '';
+
+ data.addRows([[{v:'BR-AM',f:'Amazonas'},18,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-AM'] = '';
+
+ data.addRows([[{v:'BR-MA',f:'Maranhão'},19,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-MA'] = '';
+
+ data.addRows([[{v:'BR-PA',f:'Pará'},20,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-PA'] = '';
+
+ data.addRows([[{v:'BR-CE',f:'Ceará'},21,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-CE'] = '';
+
+ data.addRows([[{v:'BR-PB',f:'Paraíba'},22,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-PB'] = '';
+
+ data.addRows([[{v:'BR-RN',f:'Rio Grande do Norte'},23,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-RN'] = '';
+
+ data.addRows([[{v:'BR-SE',f:'Sergipe'},24,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-SE'] = '';
+
+ data.addRows([[{v:'BR-PE',f:'Pernambuco'},25,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-PE'] = '';
+
+ data.addRows([[{v:'BR-PI',f:'Piauí'},26,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-PI'] = '';
+
+ data.addRows([[{v:'BR-RR',f:'Roraima'},27,'<p><b>ZP Representações LTDA</b><br> Renato Zaffari<br> Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br> Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a><br><br><b>Wares Eireli</b><br> Luis e Equipe<br> Tel/WhatsApp: <a href=\"tel:+5511970651545\">(11) 97065-1545</a><br> Email: <a href=\"mailto:sprodacs@rodacs.com.br\">sprodacs@rodacs.com.br</a></p>']]);
+ ivalue['BR-RR'] = '';
+
+ var options = {
+ backgroundColor: {fill:'#E9EDF0',stroke:'#E9EDF0' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 26,  colors: ['#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB','#0093CB']},
+ legend: 'none',	
+ datalessRegionColor: '#E9EDF0',
+ displayMode: 'regions', 
+ enableRegionInteractivity: 'true', 
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'BR',
+ keepAspectRatio: true,
+ width:800,
+ height:700,
+ tooltip: {textStyle: {color: '#095186'}, trigger:'focus', isHtml: true}	
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('map_1731522800590')); 
+ chart.draw(data, options);
+ }
+ </script>
+ <style>
+   p {
+     font-family: Arial, sans-serif;
+     font-size: 12px;
+     line-height: 1.5;
+   }
+ </style>
+ <div id='map_1731522800590'></div>
+
