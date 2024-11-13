@@ -9,7 +9,7 @@ google.charts.setOnLoadCallback(drawVisualization);
  data.addColumn('number', 'Value'); 
  data.addColumn({type:'string', role:'tooltip', p:{html:true}});var ivalue = new Array();
 
- data.addRows([[{v:'BR-RS',f:'Rio Grande do Sul'},0,'<strong>ZP Representações LTDA</strong><br><br>Renato Zaffari<br><br>Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br><br>Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a>']]);
+ data.addRows([[{v:'BR-RS',f:'Rio Grande do Sul'},0,'<b>ZP Representações LTDA</b><br>Renato Zaffari<br>Tel/WhatsApp: <a href=\"tel:+555196612168\">(51) 9961-2168</a><br>Email: <a href=\"mailto:rczaff@gmail.com\">rczaff@gmail.com</a>']]);
  ivalue['BR-RS'] = '';
 
  data.addRows([[{v:'BR-SC',f:'Santa Catarina'},1,'Rep']]);
@@ -30,8 +30,8 @@ google.charts.setOnLoadCallback(drawVisualization);
  height:400,
  tooltip: {textStyle: {color: '#095186'}, trigger:'focus', isHtml: true}	
  };
-  var chart = new google.visualization.GeoChart(document.getElementById('map_1731506451323')); 
+  var chart = new google.visualization.GeoChart(document.getElementById('map_1731507986272')); 
  chart.draw(data, options);
  }
  </script>
- <div id='map_1731506451323'></div>
+ <div id='map_1731507986272'></div>
