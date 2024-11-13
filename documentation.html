@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Interactive Maps Generator</title>
+<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+<header> <a href="index.html"><img src="styles/logo.png" class="logo" alt="Interactive Maps Generator Logo"></a>
+<h1>Interactive Maps Generator - Documentation</h1>
+<div id="smallmenu"> <a href="index.html">Generator</a> <a href="documentation.html">Documentation</a> <a href="examples.html" class="active">Examples </a></div>
+
+</header>
+<div class="clear"></div>
+<div id="main">
+    
+    <div id="leftbar">
+        
+    <ul id="leftmenu">
+    <li><a href="#01">Introduction</a></li>
+    <li><a href="#02">Overview</a></li>
+    <li><a href="#03">General Instructions</a></li>
+    <li><a href="#04">Requirements</a></li>
+    <li><a href="#06">Advanced Customization</a></li>
+    <li><a href="#07">FAQ</a></li>
+    </ul>
+    &nbsp;
+    </div>
+    
+    <div id="rightbar">
+    <a id="01"></a>
+    <h2>Introduction</h2> 
+    <div class="docontent">
+      <p><strong>Interactive Maps Generator</strong> is a standalone application to generate javascript code to display interactive maps that you can use in your blog or webpage. </p>
+      <p>&nbsp;</p>
+      <p>This application was developed by <a href="http://cmoreira.net" target="_blank">Carlos Moreira</a>, and it uses the Google GeoChart API to generate the maps. </p>
+      <p>&nbsp;</p>
+      <p><strong>Licence</strong>: <a href="http://codecanyon.net/licenses/regular_extended" target="_blank">Please refer to Regular &amp; Extended Licence at Codecayon</a></p>
+    </div>
+    
+    <a id="02"></a>
+    <h2>Overview</h2> 
+    <div class="docontent">
+      <p>The main purpose of this application is to create online maps,   displaying the world or a specific country or area, coloring regions or   adding markers that can be interactive.</p>
+      <p>&nbsp;</p>
+      <p><strong>You will be able to show hundreds of different kinds of maps online, including:</strong></p>
+      <ul>
+        <li>A map of the entire world.</li>
+        <li>A continent or a sub-continent (Africa, Europe, Americas, Asia, Oceania and all their sub-continents).</li>
+        <li>A country (including the most requested: USA , United Kingdom,   Canada, France, Germany, Spain, Italy, Brazil, India, Australia…   virtually all the countries in the world already included!)</li>
+        <li>A country divided by its regions.</li>
+        <li>A state in the United States.</li>
+        <li>The United Stated divided by metropolitan areas.</li>
+        <li>A state in the United States divided by metropolitan areas.</li>
+      </ul>
+      <p> </p>
+      <p><strong>You can add active colored regions to the map, and display them in 2 different ways:</strong></p>
+      <ul>
+        <li><strong>As Regions </strong>- It will color the whole region, for example a country, a country province, or a US state.</li>
+        <li><strong>As Markers </strong>-It will display a colored bubble in the chosen regions, that can be a city, a state or a country.</li>
+      </ul>
+      <p> </p>
+      <p><strong>You can add interactivity to the active regions:</strong></p>
+      <ul>
+        <li><strong>A Tooltip </strong>- A tooltip will be displayed by default on hover with the information you provide.</li>
+        <li><strong>An Action</strong> – You can set up diferent kinds of action   for when the user clicks in an active area. You can make a new URL   open, or simply display a message. <strong>Advanced users will be able to create their own Javascript functions for customized actions</strong>.</li>
+      </ul>
+      <p> </p>
+      <p><strong>You will be able to customize the visual of your maps:</strong></p>
+      <ul>
+        <li>Background color;</li>
+        <li>Border width and color;</li>
+        <li>Inactive regions color;</li>
+        <li>Individual colors for each active region;</li>
+        <li>Markers size;</li>
+        <li>Width and Height of the map;</li>
+      </ul>
+      <p> </p>
+      
+    </div>
+    
+    
+    <a id="03"></a>
+    <h2>General Instructions</h2> 
+    <div class="docontent"> 
+    <p>This is the screen you will find in the Generator page.<br>
+  <br>
+      
+      <img src="styles/instructions.png" /></p>
+    <p>&nbsp;</p>
+    <p>&nbsp; </p>
+    <p> <strong>01 VISUAL SETTINGS</strong></p>
+       <p> <strong>Background Color: </strong>The background color for the main area of the chart. Can be either a simple HTML color string, for example: 'red' or '#00cc00'. Tip: you can set it to <em>transparent</em> so it doesen't have any solid background color;</p>
+    <p> <strong>Map Border Color: </strong>The color of the map border, as an HTML color string.</p>
+    <p> <strong>Map Border Width: T</strong>he border width, in pixels. Tip: you can set it to 0 to display no border.</p>
+    <p> <strong>Inactive Region Color: </strong>Colors to assign to regions with no associated data. Tip: you can set it to <em>transparent</em> so it doesen't have any solid background color;</p>
+    <p><strong>Tooltip Text Color: </strong>Color string in HTML for the tooltip text. </p>
+    <p><strong>Marker Size</strong> (px): Number in pixels for the size of the bubbles, when the <em>Markers</em> display mode is chosen.</p>
+<p> <strong>Width (px):</strong> Width of the visualization, in pixels. Will be the default, unless the height option is specified and keepAspectRatio is set to true - in which case the width is calculated accordingly.</p>
+    <p> <strong>Height (px): </strong>Height of the visualization, in pixels. Will be the default, unless the width option is specified and keepAspectRatio is set to true - in which case the height is calculated accordingly.</p>
+    <p> <strong>Keep Aspect Ratio:</strong> If true, the map will be drawn at   the largest size that can fit inside the chart area at its natural   aspect ratio. If false, the map will be stretched to the exact size of   the chart as specified by the width and height options.</p>
+    <p> </p>
+    <p>&nbsp;</p>
+    <p><strong>02 - JAVASCRIPT EMBED CODE</strong></p>
+    <p>This is the code you'll need to copy and place on the webpage you want the map to appear. The code is composed by a javascript block of code and a html div. You can place this code in any webpage document that you can edit. This could be your own html files, a blogger template, a tumblr template, or other similar platform templates that you can edit the code. </p>
+    <p>For the best performance across all browsers we suggest you position the javascript code block (starting in &lt;script ... and finishing at &lt;/script&gt;) just before the closing &lt;/head&gt; tag of your file, and the div code on the area of your website where you want the map to display.</p>
+    <p>&nbsp;</p>
+<p><strong>03 - CURRENT SETTINGS / LOAD SETTINGS</strong></p>
+    <p>The tab 'Current Settings' displays a code block that you can copy and save for future use. It holds the information about the current settings of the map you are creating. This code can then be loaded in the 'Load Settings' tab. If you are building an advanced map it is advised that you save this settings, so you can use them later, in case you need to generate a new version of that map.</p>
+<p>&nbsp; </p>
+    <p> <strong>04 - MAP SETTINGS</strong></p>
+    <p> <strong>Region to Show: </strong>The area to display on the map. (Surrounding areas will be displayed as well.) Can be one of the following:<br>
+    </p>
+    <ul>
+      <li> 'world' - A map of the entire world.</li>
+      <li> A continent or a sub-continent.</li>
+      <li> A country.</li>
+      <li> A state in the United States.</li>
+    </ul>
+    <p> This default setting works only to have one of these options selected   by default when you are creating a new map. It will not prevail over a   different option you might have chosen when creating a map, even if you   choose to display the default visual settings.</p>
+    <p><strong>Display Mode:  </strong>Which type of   map you want to display. The data entered for areas to activate must match the value   specified. The following values are supported: </p>
+    <ul>
+      <li><strong>'Regions' </strong>- This is a   region map. It is the best option when you want to make a whole   continent, country, province or US metropolitan area interactive.</li>
+      <li> <strong>'Markers (Text Location)'</strong> - This is a marker map. Best option to give interactivity to a city. It will create a colored bubble on the area specified. You can insert the location where you want the markers to appear as a text string. It will be a little bit slow loading the markers, if there are a lot of them, because they need to be converted to coordinates by the google api.</li>
+      <li> <strong>'Markers (Coordinates)'</strong> - This is the same as the option before, but the input should be a coordinates value. It is much faster. This is the recomemded option if you're creating a map with more than 10 markers.</li>
+    </ul>
+    <p><strong>05 - INTERACTIVE REGION VALUES</strong></p>
+    <p>This is where you will insert the data to display. You can insert it one   by one, or use the advanced interface to include a CSV text with the   data. Follow the instructions displayed when doing so.</p>
+    <p> Data you will need to insert:</p>
+    <p> <strong>Region Code: </strong>This is the only mandatory field.   Depending on your display mode and region to display, the Region Code   needed will be different. Information on which codes or data to insert   will display according to your choices.</p>
+    <p> <strong>Title: </strong>It will be the line of the tooltip. You can use   the name of the Region for example. This was added, to ensure the value   is human readable when you have to use ISO codes.</p>
+    <p> <strong>Tooltip:</strong> Second line of the tooltip. Complementary Information. Not mandatory.</p>
+    <p> <strong>Action Value: </strong>If you chose an action this is the field   where you will have to put the value associated with it. For example,   if you chose the 'Open URL' action, you will need to insert here the URL   you want to open. If you choose 'Alert Message', you should insert the   message here.</p>
+    <p> <strong>Color: </strong>color for the active region.</p>
+<p>&nbsp;</p>
+    <p><strong>06 - THE PREVIEW</strong></p>
+<p> The Default Settings Page also has a preview map, so you can have an   idea on how your maps will look like when using the default settings.</p>
+    </div>
+    
+     <a id="04"></a>
+    <h2>Requirements</h2> 
+    <div class="docontent">
+   <p>This plugin uses the <a href="https://developers.google.com/chart/interactive/docs/gallery/geochart" target="_blank">Google Geochart API</a> that creates the SVG maps that this plugin displays, therefore you need to be<strong> connected to the internet</strong> for this application to work.</p>
+   <p>It works better in the most <strong>recent browsers</strong>, specially Firefox 3 and above and Chrome.</p>
+   <p>Your browser needs to have <strong>javascript enabled</strong>.</p>
+    </div>
+    
+    <a id="06"></a>
+    <h2>Advanced Customization</h2> 
+    <div class="docontent">
+      <p>When creating a map, you have a lot of customization options on the administration panel, including: background color, border color and width, inactive regions color, markers size and color and the active regions color. This are the options that the Google Geochart API has by default. However, advanced users will be able to extend this customization features.</p>
+      <p>If you have some knowledge of CSS, you will be able to customize the maps even further, creating css rules for the maps you created.</p>
+      <p>You will have to place this CSS rules on your CSS file, or embed them on the post or page where your map will show.</p>
+      <p><strong><br>
+        Country borders color and mouse cursor</strong></p>
+      <p><em>#visualization path {<br>
+        stroke-width:1; /* control the countries borders width */<br>
+        stroke:#6699cc; /* choose a color for the border */<br>
+        cursor:pointer; /* display the pointer when the map hovers the map. */<br>
+        }</em></p>
+      <p><strong><br>
+        Hover effect</strong></p>
+      <p>The hover effect is created with a class and an advanced selector that creates a rule to fill with the color red the regions that are colored #f5f5f5, the color that was chosen for the inactive regions.</p>
+      <p><em>#visualization path:not([fill^=&quot;#f5f5f5&quot;]):hover {<br>
+        fill:red;<br>
+        }</em></p>
+      <p><br>
+      </p>
+    </div>
+    
+    
+    <a id="07"></a>
+    <h2>FAQ</h2> 
+    <div class="docontent">
+      <p><strong>Can I display multiple maps per page?</strong></p>
+      <p>Yes you can. However, you will have to change the last two values that say  'visualization'  in the embed code, and give it unique values for each map you want to include.</p>
+      <p>&nbsp;</p>
+      <p><strong>Do I have to include or upload any extra files to my website so the maps work?</strong></p>
+      <p>No. You don&rsquo;t have to upload any maps or extra files, just place the embeb code. You just need to choose what area to display from a dropdown menu. The   code loads the maps with the Google Geochart  API  that includes   maps of all the world.</p>
+      <p>&nbsp;</p>
+      <p><strong>How do maps display and function in a responsive website?</strong></p>
+      <p>The maps are partially responsive. If no   width is specified it will load with the maximum width available in the   container div. For example, it will load and adapt with different sizes   for phones/ipads/laptops. However, after loaded it will not change size   if you resize the window.</p>
+    </div>
+    </div>
+    </div>
+    
+</div>
+<div class="clear"></div>
+<footer>Application Developed By <a href="http://cmoreira.net" target="_blank">CMoreira</a></footer>
+</body>
+</html>

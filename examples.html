@@ -1,0 +1,1881 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Interactive Maps Generator</title>
+<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+<header><a href="index.html"><img src="styles/logo.png" class="logo" alt="Interactive Maps Generator Logo"></a>
+  <h1>Interactive Maps Generator - Examples</h1>
+<div id="smallmenu"> <a href="index.html">Generator</a> <a href="documentation.html">Documentation</a> <a href="examples.html" class="active">Examples </a></div>
+
+</header>
+<div class="clear"></div>
+<div id="main">
+
+    <div id="leftbar">
+    <ul id="leftmenu">
+    <li><a href="#01">US Elections Map</a></li>
+    <li><a href="#02">World Map - Countries</a></li>
+    <li><a href="#03">World Map - Continents</a></li>
+    <li><a href="#04">Australia</a></li>
+    <li><a href="#05">France - Regions - Custom Action</a></li>
+    <li><a href="#06">Germany - Markers - Custom Action</a></li>
+    <li><a href="#07">South America - Spoken Languages</a></li>
+    <li><a href="#08">United Kingdom - Cities</a></li>
+    <li><a href="#09">Europe - Cities</a></li>
+     <li><a href="#10">Brazil - Regions</a></li>
+    </ul>
+    &nbsp;
+    </div>
+
+    <div id="rightbar">
+    <a id ="01"></a>
+      <h2>US Elections Map</h2>
+
+      <div class="map">
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'US-AK',f:'Alaska'},0,'Obama (D)']]);
+ ivalue['US-AK'] = 'Obama (D)  will <span style="color:#444; font-weight:bold;">win</span> in Alaska.';
+
+ data.addRows([[{v:'US-AL',f:'Alabama'},1,'Obama (D)']]);
+ ivalue['US-AL'] = 'Obama (D) will win in Alabama';
+
+ data.addRows([[{v:'US-AR',f:'Arkansas'},2,'Obama (D)']]);
+ ivalue['US-AR'] = 'Obama (D) will win in Arkansas';
+
+ data.addRows([[{v:'US-AZ',f:'Arizona'},3,'Obama (D)']]);
+ ivalue['US-AZ'] = 'Obama (D) will win in Arizona';
+
+ data.addRows([[{v:'US-CA',f:'California'},4,'Obama (D)']]);
+ ivalue['US-CA'] = 'Obama (D) will win in California';
+
+ data.addRows([[{v:'US-CO',f:'Colorado'},5,'Obama (D)']]);
+ ivalue['US-CO'] = 'Obama (D) will win in Colorado';
+
+ data.addRows([[{v:'US-CT',f:'Connecticut'},6,'Obama (D)']]);
+ ivalue['US-CT'] = 'Obama (D) will win in Connecticut';
+
+ data.addRows([[{v:'US-DE',f:'Delaware'},7,'Obama (D)']]);
+ ivalue['US-DE'] = 'Obama (D) will win in Delaware';
+
+ data.addRows([[{v:'US-FL',f:'Florida'},8,'Obama (D)']]);
+ ivalue['US-FL'] = 'Obama (D) will win in Florida';
+
+ data.addRows([[{v:'US-GA',f:'Georgia'},9,'Obama (D)']]);
+ ivalue['US-GA'] = 'Obama (D) will win in Georgia';
+
+ data.addRows([[{v:'US-HI',f:'Hawaii'},10,'Obama (D)']]);
+ ivalue['US-HI'] = 'Obama (D) will win in Hawaii';
+
+ data.addRows([[{v:'US-IA',f:'Iowa'},11,'Obama (D)']]);
+ ivalue['US-IA'] = 'Obama (D) will win in Iowa';
+
+ data.addRows([[{v:'US-ID',f:'Idaho'},12,'Obama (D)']]);
+ ivalue['US-ID'] = 'Obama (D) will win in Idaho';
+
+ data.addRows([[{v:'US-IL',f:'Illinois'},13,'Obama (D)']]);
+ ivalue['US-IL'] = 'Obama (D) will win in Illinois';
+
+ data.addRows([[{v:'US-IN',f:'Indiana'},14,'Obama (D)']]);
+ ivalue['US-IN'] = 'Obama (D) will win in Indiana';
+
+ data.addRows([[{v:'US-KS',f:'Kansas'},15,'Obama (D)']]);
+ ivalue['US-KS'] = 'Obama (D) will win in Kansas';
+
+ data.addRows([[{v:'US-KY',f:'Kentucky'},16,'Obama (D)']]);
+ ivalue['US-KY'] = 'Obama (D) will win in Kentucky';
+
+ data.addRows([[{v:'US-LA',f:'Louisiana'},17,'Obama (D)']]);
+ ivalue['US-LA'] = 'Obama (D) will win in Louisiana';
+
+ data.addRows([[{v:'US-MA',f:'Massachusetts'},18,'Obama (D)']]);
+ ivalue['US-MA'] = 'Obama (D) will win in Massachusetts';
+
+ data.addRows([[{v:'US-MD',f:'Maryland'},19,'Obama (D)']]);
+ ivalue['US-MD'] = 'Obama (D) will win in Maryland';
+
+ data.addRows([[{v:'US-ME',f:'Maine'},20,'Obama (D)']]);
+ ivalue['US-ME'] = 'Obama (D) will win in Maine';
+
+ data.addRows([[{v:'US-MI',f:'Michigan'},21,'Obama (D)']]);
+ ivalue['US-MI'] = 'Obama (D) will win in Michigan';
+
+ data.addRows([[{v:'US-MN',f:'Minnesota'},22,'Obama (D)']]);
+ ivalue['US-MN'] = 'Obama (D) will win in Minnesota';
+
+ data.addRows([[{v:'US-MO',f:'Missouri'},23,'Obama (D)']]);
+ ivalue['US-MO'] = 'Obama (D) will win in Missouri';
+
+ data.addRows([[{v:'US-MS',f:'Mississippi'},24,'Obama (D)']]);
+ ivalue['US-MS'] = 'Obama (D) will win in Mississippi';
+
+ data.addRows([[{v:'US-MT',f:'Montana'},25,'Obama (D)']]);
+ ivalue['US-MT'] = 'Obama (D) will win in Montana';
+
+ data.addRows([[{v:'US-NC',f:'North Carolina'},26,'Romney (R)']]);
+ ivalue['US-NC'] = 'Romney (R) will win in North Carolina';
+
+ data.addRows([[{v:'US-ND',f:'North Dakota'},27,'Romney (R)']]);
+ ivalue['US-ND'] = 'Romney (R) will win in North Dakota';
+
+ data.addRows([[{v:'US-NE',f:'Nebraska'},28,'Romney (R)']]);
+ ivalue['US-NE'] = 'Romney (R) will win in Nebraska';
+
+ data.addRows([[{v:'US-NH',f:'New Hampshire'},29,'Romney (R)']]);
+ ivalue['US-NH'] = 'Romney (R) will win in New Hampshire';
+
+ data.addRows([[{v:'US-NJ',f:'New Jersey'},30,'Romney (R)']]);
+ ivalue['US-NJ'] = 'Romney (R) will win in New Jersey';
+
+ data.addRows([[{v:'US-NM',f:'New Mexico'},31,'Romney (R)']]);
+ ivalue['US-NM'] = 'Romney (R) will win in New Mexico';
+
+ data.addRows([[{v:'US-NV',f:'Nevada'},32,'Romney (R)']]);
+ ivalue['US-NV'] = 'Romney (R) will win in Nevada';
+
+ data.addRows([[{v:'US-NY',f:'New York'},33,'Romney (R)']]);
+ ivalue['US-NY'] = 'Romney (R) will win in New York';
+
+ data.addRows([[{v:'US-OH',f:'Ohio'},34,'Romney (R)']]);
+ ivalue['US-OH'] = 'Romney (R) will win in Ohio';
+
+ data.addRows([[{v:'US-OK',f:'Oklahoma'},35,'Romney (R)']]);
+ ivalue['US-OK'] = 'Romney (R) will win in Oklahoma';
+
+ data.addRows([[{v:'US-OR',f:'Oregon'},36,'Romney (R)']]);
+ ivalue['US-OR'] = 'Romney (R) will win in Oregon';
+
+ data.addRows([[{v:'US-PA',f:'Pennsylvania'},37,'Romney (R)']]);
+ ivalue['US-PA'] = 'Romney (R) will win in Pennsylvania';
+
+ data.addRows([[{v:'US-RI',f:'Rhode Island'},38,'Romney (R)']]);
+ ivalue['US-RI'] = 'Romney (R) will win in Rhode Island';
+
+ data.addRows([[{v:'US-SC',f:'South Carolina'},39,'Romney (R)']]);
+ ivalue['US-SC'] = 'Romney (R) will win in South Carolina';
+
+ data.addRows([[{v:'US-SD',f:'South Dakota'},40,'Romney (R)']]);
+ ivalue['US-SD'] = 'Romney (R) will win in South Dakota';
+
+ data.addRows([[{v:'US-TN',f:'Tennessee'},41,'Romney (R)']]);
+ ivalue['US-TN'] = 'Romney (R) will win in Tennessee';
+
+ data.addRows([[{v:'US-TX',f:'Texas'},42,'Undecided']]);
+ ivalue['US-TX'] = 'People are Undecided in Texas';
+
+ data.addRows([[{v:'US-UT',f:'Utah'},43,'Undecided']]);
+ ivalue['US-UT'] = 'People are Undecided in Utah';
+
+ data.addRows([[{v:'US-VA',f:'Virginia'},44,'Undecided']]);
+ ivalue['US-VA'] = 'People are Undecided in Virginia';
+
+ data.addRows([[{v:'US-VT',f:'Vermont'},45,'Undecided']]);
+ ivalue['US-VT'] = 'People are Undecided in Vermont';
+
+ data.addRows([[{v:'US-WA',f:'Washington'},46,'Undecided']]);
+ ivalue['US-WA'] = 'People are Undecided in Washington';
+
+ data.addRows([[{v:'US-WI',f:'Wisconsin'},47,'Undecided']]);
+ ivalue['US-WI'] = 'People are Undecided in Wisconsin';
+
+ data.addRows([[{v:'US-WV',f:'West Virginia'},48,'Undecided']]);
+ ivalue['US-WV'] = 'People are Undecided in West Virginia';
+
+ data.addRows([[{v:'US-WY',f:'Wyoming'},49,'Undecided']]);
+ ivalue['US-WY'] = 'People are Undecided in Wyoming';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 49,  colors: ['#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#E0D39E','#E0D39E','#E0D39E','#E0D39E','#E0D39E','#E0D39E','#E0D39E','#E0D39E',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'US',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'hover'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+  google.visualization.events.addListener(chart, 'select', function() {
+  var selection = chart.getSelection();
+  if (selection.length == 1) {
+  var selectedRow = selection[0].row;
+  var selectedRegion = data.getValue(selectedRow, 0);
+  if(ivalue[selectedRegion] != '') { alert(ivalue[selectedRegion]); }
+  }
+  });
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div></div>
+
+ <div class="description">
+ <strong>Description</strong><br>
+ Example of an US Map divided States with an alert message onclick.
+
+ </div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'US-AK',f:'Alaska'},0,'Obama (D)']]);
+ ivalue['US-AK'] = 'Obama (D)  will <span style="color:#444; font-weight:bold;">win</span> in Alaska.';
+
+ data.addRows([[{v:'US-AL',f:'Alabama'},1,'Obama (D)']]);
+ ivalue['US-AL'] = 'Obama (D) will win in Alabama';
+
+ data.addRows([[{v:'US-AR',f:'Arkansas'},2,'Obama (D)']]);
+ ivalue['US-AR'] = 'Obama (D) will win in Arkansas';
+
+ data.addRows([[{v:'US-AZ',f:'Arizona'},3,'Obama (D)']]);
+ ivalue['US-AZ'] = 'Obama (D) will win in Arizona';
+
+ data.addRows([[{v:'US-CA',f:'California'},4,'Obama (D)']]);
+ ivalue['US-CA'] = 'Obama (D) will win in California';
+
+ data.addRows([[{v:'US-CO',f:'Colorado'},5,'Obama (D)']]);
+ ivalue['US-CO'] = 'Obama (D) will win in Colorado';
+
+ data.addRows([[{v:'US-CT',f:'Connecticut'},6,'Obama (D)']]);
+ ivalue['US-CT'] = 'Obama (D) will win in Connecticut';
+
+ data.addRows([[{v:'US-DE',f:'Delaware'},7,'Obama (D)']]);
+ ivalue['US-DE'] = 'Obama (D) will win in Delaware';
+
+ data.addRows([[{v:'US-FL',f:'Florida'},8,'Obama (D)']]);
+ ivalue['US-FL'] = 'Obama (D) will win in Florida';
+
+ data.addRows([[{v:'US-GA',f:'Georgia'},9,'Obama (D)']]);
+ ivalue['US-GA'] = 'Obama (D) will win in Georgia';
+
+ data.addRows([[{v:'US-HI',f:'Hawaii'},10,'Obama (D)']]);
+ ivalue['US-HI'] = 'Obama (D) will win in Hawaii';
+
+ data.addRows([[{v:'US-IA',f:'Iowa'},11,'Obama (D)']]);
+ ivalue['US-IA'] = 'Obama (D) will win in Iowa';
+
+ data.addRows([[{v:'US-ID',f:'Idaho'},12,'Obama (D)']]);
+ ivalue['US-ID'] = 'Obama (D) will win in Idaho';
+
+ data.addRows([[{v:'US-IL',f:'Illinois'},13,'Obama (D)']]);
+ ivalue['US-IL'] = 'Obama (D) will win in Illinois';
+
+ data.addRows([[{v:'US-IN',f:'Indiana'},14,'Obama (D)']]);
+ ivalue['US-IN'] = 'Obama (D) will win in Indiana';
+
+ data.addRows([[{v:'US-KS',f:'Kansas'},15,'Obama (D)']]);
+ ivalue['US-KS'] = 'Obama (D) will win in Kansas';
+
+ data.addRows([[{v:'US-KY',f:'Kentucky'},16,'Obama (D)']]);
+ ivalue['US-KY'] = 'Obama (D) will win in Kentucky';
+
+ data.addRows([[{v:'US-LA',f:'Louisiana'},17,'Obama (D)']]);
+ ivalue['US-LA'] = 'Obama (D) will win in Louisiana';
+
+ data.addRows([[{v:'US-MA',f:'Massachusetts'},18,'Obama (D)']]);
+ ivalue['US-MA'] = 'Obama (D) will win in Massachusetts';
+
+ data.addRows([[{v:'US-MD',f:'Maryland'},19,'Obama (D)']]);
+ ivalue['US-MD'] = 'Obama (D) will win in Maryland';
+
+ data.addRows([[{v:'US-ME',f:'Maine'},20,'Obama (D)']]);
+ ivalue['US-ME'] = 'Obama (D) will win in Maine';
+
+ data.addRows([[{v:'US-MI',f:'Michigan'},21,'Obama (D)']]);
+ ivalue['US-MI'] = 'Obama (D) will win in Michigan';
+
+ data.addRows([[{v:'US-MN',f:'Minnesota'},22,'Obama (D)']]);
+ ivalue['US-MN'] = 'Obama (D) will win in Minnesota';
+
+ data.addRows([[{v:'US-MO',f:'Missouri'},23,'Obama (D)']]);
+ ivalue['US-MO'] = 'Obama (D) will win in Missouri';
+
+ data.addRows([[{v:'US-MS',f:'Mississippi'},24,'Obama (D)']]);
+ ivalue['US-MS'] = 'Obama (D) will win in Mississippi';
+
+ data.addRows([[{v:'US-MT',f:'Montana'},25,'Obama (D)']]);
+ ivalue['US-MT'] = 'Obama (D) will win in Montana';
+
+ data.addRows([[{v:'US-NC',f:'North Carolina'},26,'Romney (R)']]);
+ ivalue['US-NC'] = 'Romney (R) will win in North Carolina';
+
+ data.addRows([[{v:'US-ND',f:'North Dakota'},27,'Romney (R)']]);
+ ivalue['US-ND'] = 'Romney (R) will win in North Dakota';
+
+ data.addRows([[{v:'US-NE',f:'Nebraska'},28,'Romney (R)']]);
+ ivalue['US-NE'] = 'Romney (R) will win in Nebraska';
+
+ data.addRows([[{v:'US-NH',f:'New Hampshire'},29,'Romney (R)']]);
+ ivalue['US-NH'] = 'Romney (R) will win in New Hampshire';
+
+ data.addRows([[{v:'US-NJ',f:'New Jersey'},30,'Romney (R)']]);
+ ivalue['US-NJ'] = 'Romney (R) will win in New Jersey';
+
+ data.addRows([[{v:'US-NM',f:'New Mexico'},31,'Romney (R)']]);
+ ivalue['US-NM'] = 'Romney (R) will win in New Mexico';
+
+ data.addRows([[{v:'US-NV',f:'Nevada'},32,'Romney (R)']]);
+ ivalue['US-NV'] = 'Romney (R) will win in Nevada';
+
+ data.addRows([[{v:'US-NY',f:'New York'},33,'Romney (R)']]);
+ ivalue['US-NY'] = 'Romney (R) will win in New York';
+
+ data.addRows([[{v:'US-OH',f:'Ohio'},34,'Romney (R)']]);
+ ivalue['US-OH'] = 'Romney (R) will win in Ohio';
+
+ data.addRows([[{v:'US-OK',f:'Oklahoma'},35,'Romney (R)']]);
+ ivalue['US-OK'] = 'Romney (R) will win in Oklahoma';
+
+ data.addRows([[{v:'US-OR',f:'Oregon'},36,'Romney (R)']]);
+ ivalue['US-OR'] = 'Romney (R) will win in Oregon';
+
+ data.addRows([[{v:'US-PA',f:'Pennsylvania'},37,'Romney (R)']]);
+ ivalue['US-PA'] = 'Romney (R) will win in Pennsylvania';
+
+ data.addRows([[{v:'US-RI',f:'Rhode Island'},38,'Romney (R)']]);
+ ivalue['US-RI'] = 'Romney (R) will win in Rhode Island';
+
+ data.addRows([[{v:'US-SC',f:'South Carolina'},39,'Romney (R)']]);
+ ivalue['US-SC'] = 'Romney (R) will win in South Carolina';
+
+ data.addRows([[{v:'US-SD',f:'South Dakota'},40,'Romney (R)']]);
+ ivalue['US-SD'] = 'Romney (R) will win in South Dakota';
+
+ data.addRows([[{v:'US-TN',f:'Tennessee'},41,'Romney (R)']]);
+ ivalue['US-TN'] = 'Romney (R) will win in Tennessee';
+
+ data.addRows([[{v:'US-TX',f:'Texas'},42,'Undecided']]);
+ ivalue['US-TX'] = 'People are Undecided in Texas';
+
+ data.addRows([[{v:'US-UT',f:'Utah'},43,'Undecided']]);
+ ivalue['US-UT'] = 'People are Undecided in Utah';
+
+ data.addRows([[{v:'US-VA',f:'Virginia'},44,'Undecided']]);
+ ivalue['US-VA'] = 'People are Undecided in Virginia';
+
+ data.addRows([[{v:'US-VT',f:'Vermont'},45,'Undecided']]);
+ ivalue['US-VT'] = 'People are Undecided in Vermont';
+
+ data.addRows([[{v:'US-WA',f:'Washington'},46,'Undecided']]);
+ ivalue['US-WA'] = 'People are Undecided in Washington';
+
+ data.addRows([[{v:'US-WI',f:'Wisconsin'},47,'Undecided']]);
+ ivalue['US-WI'] = 'People are Undecided in Wisconsin';
+
+ data.addRows([[{v:'US-WV',f:'West Virginia'},48,'Undecided']]);
+ ivalue['US-WV'] = 'People are Undecided in West Virginia';
+
+ data.addRows([[{v:'US-WY',f:'Wyoming'},49,'Undecided']]);
+ ivalue['US-WY'] = 'People are Undecided in Wyoming';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 49,  colors: ['#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#DE3403','#E0D39E','#E0D39E','#E0D39E','#E0D39E','#E0D39E','#E0D39E','#E0D39E','#E0D39E',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'US',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'hover'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+  google.visualization.events.addListener(chart, 'select', function() {
+  var selection = chart.getSelection();
+  if (selection.length == 1) {
+  var selectedRow = selection[0].row;
+  var selectedRegion = data.getValue(selectedRow, 0);
+  if(ivalue[selectedRegion] != '') { alert(ivalue[selectedRegion]); }
+  }
+  });
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div></textarea>
+ </div> <div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"#FFFFFF","stroke":"0","bordercolor":"#FFFFFF","incolor":"#f5f5f5","width":"600","height":"400","aspratio":"true","tooltipcolor":"#444444","tooltip":"hover","interact":"true","areacombo":"US,provinces","markersize":"10","displaymode":"regions","mapaction":"i_map_action_alert","customaction":"","placestxt":"US-AK%2CAlaska%2CObama%20%28D%29%2CObama%20%28D%29%20%20will%20%3Cspan%20style%3D%22color%3A%23444%26%2359%20font-weight%3Abold%26%2359%22%3Ewin%3C/span%3E%20in%20Alaska.%2C%23438094%3BUS-AL%2CAlabama%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Alabama%2C%23438094%3BUS-AR%2CArkansas%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Arkansas%2C%23438094%3BUS-AZ%2CArizona%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Arizona%2C%23438094%3BUS-CA%2CCalifornia%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20California%2C%23438094%3BUS-CO%2CColorado%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Colorado%2C%23438094%3BUS-CT%2CConnecticut%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Connecticut%2C%23438094%3BUS-DE%2CDelaware%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Delaware%2C%23438094%3BUS-FL%2CFlorida%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Florida%2C%23438094%3BUS-GA%2CGeorgia%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Georgia%2C%23438094%3BUS-HI%2CHawaii%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Hawaii%2C%23438094%3BUS-IA%2CIowa%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Iowa%2C%23438094%3BUS-ID%2CIdaho%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Idaho%2C%23438094%3BUS-IL%2CIllinois%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Illinois%2C%23438094%3BUS-IN%2CIndiana%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Indiana%2C%23438094%3BUS-KS%2CKansas%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Kansas%2C%23438094%3BUS-KY%2CKentucky%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Kentucky%2C%23438094%3BUS-LA%2CLouisiana%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Louisiana%2C%23438094%3BUS-MA%2CMassachusetts%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Massachusetts%2C%23438094%3BUS-MD%2CMaryland%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Maryland%2C%23438094%3BUS-ME%2CMaine%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Maine%2C%23438094%3BUS-MI%2CMichigan%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Michigan%2C%23438094%3BUS-MN%2CMinnesota%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Minnesota%2C%23438094%3BUS-MO%2CMissouri%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Missouri%2C%23438094%3BUS-MS%2CMississippi%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Mississippi%2C%23438094%3BUS-MT%2CMontana%2CObama%20%28D%29%2CObama%20%28D%29%20will%20win%20in%20Montana%2C%23438094%3BUS-NC%2CNorth%20Carolina%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20North%20Carolina%2C%23DE3403%3BUS-ND%2CNorth%20Dakota%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20North%20Dakota%2C%23DE3403%3BUS-NE%2CNebraska%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20Nebraska%2C%23DE3403%3BUS-NH%2CNew%20Hampshire%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20New%20Hampshire%2C%23DE3403%3BUS-NJ%2CNew%20Jersey%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20New%20Jersey%2C%23DE3403%3BUS-NM%2CNew%20Mexico%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20New%20Mexico%2C%23DE3403%3BUS-NV%2CNevada%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20Nevada%2C%23DE3403%3BUS-NY%2CNew%20York%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20New%20York%2C%23DE3403%3BUS-OH%2COhio%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20Ohio%2C%23DE3403%3BUS-OK%2COklahoma%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20Oklahoma%2C%23DE3403%3BUS-OR%2COregon%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20Oregon%2C%23DE3403%3BUS-PA%2CPennsylvania%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20Pennsylvania%2C%23DE3403%3BUS-RI%2CRhode%20Island%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20Rhode%20Island%2C%23DE3403%3BUS-SC%2CSouth%20Carolina%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20South%20Carolina%2C%23DE3403%3BUS-SD%2CSouth%20Dakota%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20South%20Dakota%2C%23DE3403%3BUS-TN%2CTennessee%2CRomney%20%28R%29%2CRomney%20%28R%29%20will%20win%20in%20Tennessee%2C%23DE3403%3BUS-TX%2CTexas%2CUndecided%2CPeople%20are%20Undecided%20in%20Texas%2C%23E0D39E%3BUS-UT%2CUtah%2CUndecided%2CPeople%20are%20Undecided%20in%20Utah%2C%23E0D39E%3BUS-VA%2CVirginia%2CUndecided%2CPeople%20are%20Undecided%20in%20Virginia%2C%23E0D39E%3BUS-VT%2CVermont%2CUndecided%2CPeople%20are%20Undecided%20in%20Vermont%2C%23E0D39E%3BUS-WA%2CWashington%2CUndecided%2CPeople%20are%20Undecided%20in%20Washington%2C%23E0D39E%3BUS-WI%2CWisconsin%2CUndecided%2CPeople%20are%20Undecided%20in%20Wisconsin%2C%23E0D39E%3BUS-WV%2CWest%20Virginia%2CUndecided%2CPeople%20are%20Undecided%20in%20West%20Virginia%2C%23E0D39E%3BUS-WY%2CWyoming%2CUndecided%2CPeople%20are%20Undecided%20in%20Wyoming%2C%23E0D39E%3B"}</textarea>
+
+ </div>
+      <a id ="02"></a>
+    <h2>World Map - Countries</h2>
+    <div class="map">
+   <script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'US',f:'United States of America'},0,'21% of Visits']]);
+ ivalue['US'] = '';
+
+ data.addRows([[{v:'GB',f:'United Kingdom'},1,'7% of visits']]);
+ ivalue['GB'] = '';
+
+ data.addRows([[{v:'DE',f:'Germany'},2,'6% of visits']]);
+ ivalue['DE'] = '';
+
+ data.addRows([[{v:'FR',f:'France'},3,'5% of visits']]);
+ ivalue['FR'] = '';
+
+ data.addRows([[{v:'ES',f:'Spain'},4,'5% of visits']]);
+ ivalue['ES'] = '';
+
+ data.addRows([[{v:'CA',f:'Canada'},5,'4% of visits']]);
+ ivalue['CA'] = '';
+
+ data.addRows([[{v:'IT',f:'Italy'},6,'4% of visits']]);
+ ivalue['IT'] = '';
+
+ data.addRows([[{v:'NL',f:'The Netherlands'},7,'4% of visits']]);
+ ivalue['NL'] = '';
+
+ data.addRows([[{v:'BR',f:'Brazil'},8,'4% of visits']]);
+ ivalue['BR'] = '';
+
+ data.addRows([[{v:'TR',f:'Turkey'},9,'3% of visits']]);
+ ivalue['TR'] = '';
+
+ data.addRows([[{v:'IN',f:'India'},10,'3% of visits']]);
+ ivalue['IN'] = '';
+
+ data.addRows([[{v:'RU',f:'Russia'},11,'3% of visits']]);
+ ivalue['RU'] = '';
+
+ data.addRows([[{v:'AU',f:'Australia'},12,'2% of visits']]);
+ ivalue['AU'] = '';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 12,  colors: ['#D95F0E','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FFF7BC','#FFF7BC','#FFF7BC','#FFF7BC',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#F5F0E7',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'countries',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'world',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization01'));
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization01'></div>
+    </div>
+
+  <div class="description">
+ <strong>Description</strong><br>
+ Example of a world map with some countries highlighted and a custom tooltip.
+
+ </div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'US',f:'United States of America'},0,'21% of Visits']]);
+ ivalue['US'] = '';
+
+ data.addRows([[{v:'GB',f:'United Kingdom'},1,'7% of visits']]);
+ ivalue['GB'] = '';
+
+ data.addRows([[{v:'DE',f:'Germany'},2,'6% of visits']]);
+ ivalue['DE'] = '';
+
+ data.addRows([[{v:'FR',f:'France'},3,'5% of visits']]);
+ ivalue['FR'] = '';
+
+ data.addRows([[{v:'ES',f:'Spain'},4,'5% of visits']]);
+ ivalue['ES'] = '';
+
+ data.addRows([[{v:'CA',f:'Canada'},5,'4% of visits']]);
+ ivalue['CA'] = '';
+
+ data.addRows([[{v:'IT',f:'Italy'},6,'4% of visits']]);
+ ivalue['IT'] = '';
+
+ data.addRows([[{v:'NL',f:'The Netherlands'},7,'4% of visits']]);
+ ivalue['NL'] = '';
+
+ data.addRows([[{v:'BR',f:'Brazil'},8,'4% of visits']]);
+ ivalue['BR'] = '';
+
+ data.addRows([[{v:'TR',f:'Turkey'},9,'3% of visits']]);
+ ivalue['TR'] = '';
+
+ data.addRows([[{v:'IN',f:'India'},10,'3% of visits']]);
+ ivalue['IN'] = '';
+
+ data.addRows([[{v:'RU',f:'Russia'},11,'3% of visits']]);
+ ivalue['RU'] = '';
+
+ data.addRows([[{v:'AU',f:'Australia'},12,'2% of visits']]);
+ ivalue['AU'] = '';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 12,  colors: ['#D95F0E','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FEC44F','#FFF7BC','#FFF7BC','#FFF7BC','#FFF7BC',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#F5F0E7',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'countries',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'world',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div></textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"#FFFFFF","stroke":"0","bordercolor":"#FFFFFF","incolor":"#F5F0E7","width":"600","height":"400","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","interact":"true","areacombo":"world,countries","markersize":"10","displaymode":"regions","mapaction":"none","customaction":"","placestxt":"US%2CUnited%20States%20of%20America%2C21%25%20of%20Visits%2C%2C%23D95F0E%3BGB%2CUnited%20Kingdom%2C7%25%20of%20visits%2C%2C%23FEC44F%3BDE%2CGermany%2C6%25%20of%20visits%2C%2C%23FEC44F%3BFR%2CFrance%2C5%25%20of%20visits%2C%2C%23FEC44F%3BES%2CSpain%2C5%25%20of%20visits%2C%2C%23FEC44F%3BCA%2CCanada%2C4%25%20of%20visits%2C%2C%23FEC44F%3BIT%2CItaly%2C4%25%20of%20visits%2C%2C%23FEC44F%3BNL%2CThe%20Netherlands%2C4%25%20of%20visits%2C%2C%23FEC44F%3BBR%2CBrazil%2C4%25%20of%20visits%2C%2C%23FEC44F%3BTR%2CTurkey%2C3%25%20of%20visits%2C%2C%23FFF7BC%3BIN%2CIndia%2C3%25%20of%20visits%2C%2C%23FFF7BC%3BRU%2CRussia%2C3%25%20of%20visits%2C%2C%23FFF7BC%3BAU%2CAustralia%2C2%25%20of%20visits%2C%2C%23FFF7BC%3B"}</textarea>
+</div>
+
+
+
+    <a id ="03"></a>
+    <h2>World Map - Continents</h2>
+    <div class="map">
+
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'002',f:'Africa'},0,'Click to go to wikipedia']]);
+ ivalue['002'] = 'http://en.wikipedia.org/wiki/Africa';
+
+ data.addRows([[{v:'150',f:'Europe'},1,'Click to visit Wikipedia']]);
+ ivalue['150'] = 'http://en.wikipedia.org/wiki/Europe';
+
+ data.addRows([[{v:'019',f:'Americas'},2,'Click to visit Wikipedia']]);
+ ivalue['019'] = 'http://en.wikipedia.org/wiki/Americas';
+
+ data.addRows([[{v:'142',f:'Asia'},3,'Click to visit Wikipedia']]);
+ ivalue['142'] = 'http://en.wikipedia.org/wiki/Asia';
+
+ data.addRows([[{v:'009',f:'Oceania'},4,'Click to visit Wikipedia']]);
+ ivalue['009'] = 'http://en.wikipedia.org/wiki/Oceania';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 4,  colors: ['#A8A8A8','#939473','#B1B38B','#90AD89','#87AAAD',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'continents',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'world',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization02'));
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization02'></div>
+    </div>
+   <div class="description">
+ <strong>Description</strong><br>
+ Example of a world map with the continents highlighted.
+
+ </div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'002',f:'Africa'},0,'Click to go to wikipedia']]);
+ ivalue['002'] = 'http://en.wikipedia.org/wiki/Africa';
+
+ data.addRows([[{v:'150',f:'Europe'},1,'Click to visit Wikipedia']]);
+ ivalue['150'] = 'http://en.wikipedia.org/wiki/Europe';
+
+ data.addRows([[{v:'019',f:'Americas'},2,'Click to visit Wikipedia']]);
+ ivalue['019'] = 'http://en.wikipedia.org/wiki/Americas';
+
+ data.addRows([[{v:'142',f:'Asia'},3,'Click to visit Wikipedia']]);
+ ivalue['142'] = 'http://en.wikipedia.org/wiki/Asia';
+
+ data.addRows([[{v:'009',f:'Oceania'},4,'Click to visit Wikipedia']]);
+ ivalue['009'] = 'http://en.wikipedia.org/wiki/Oceania';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 4,  colors: ['#A8A8A8','#939473','#B1B38B','#90AD89','#87AAAD',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'continents',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'world',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div></textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"#FFFFFF","stroke":"0","bordercolor":"#FFFFFF","incolor":"#f5f5f5","width":"600","height":"400","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","interact":"true","areacombo":"world,continents","markersize":"10","displaymode":"regions","mapaction":"none","customaction":"","placestxt":"002%2CAfrica%2CClick%20to%20go%20to%20wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Africa%2C%23A8A8A8%3B150%2CEurope%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Europe%2C%23939473%3B019%2CAmericas%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Americas%2C%23B1B38B%3B142%2CAsia%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Asia%2C%2390AD89%3B009%2COceania%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Oceania%2C%2387AAAD%3B"}</textarea>
+</div>
+
+
+    <a id ="04"></a>
+    <h2>Australia</h2>
+        <div class="map">
+        <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'AU-NSW',f:'New South Wales'},0,'Click to visit Wikipedia']]);
+ ivalue['AU-NSW'] = 'http://en.wikipedia.org/wiki/New_South_Wales';
+
+ data.addRows([[{v:'AU-QLD',f:'Queensland'},1,'Click to visit Wikipedia']]);
+ ivalue['AU-QLD'] = 'http://en.wikipedia.org/wiki/Queensland';
+
+ data.addRows([[{v:'AU-SA',f:'South Australia'},2,'Click to visit Wikipedia']]);
+ ivalue['AU-SA'] = 'http://en.wikipedia.org/wiki/South_Australia';
+
+ data.addRows([[{v:'AU-TAS',f:'Tasmania'},3,'Click to visit Wikipedia']]);
+ ivalue['AU-TAS'] = 'http://en.wikipedia.org/wiki/Tasmania';
+
+ data.addRows([[{v:'AU-VIC',f:'Victoria'},4,'Click to visit Wikipedia']]);
+ ivalue['AU-VIC'] = 'http://en.wikipedia.org/wiki/Victoria_(Australia)';
+
+ data.addRows([[{v:'AU-WA',f:'Western Australia'},5,'Click to visit Wikipedia']]);
+ ivalue['AU-WA'] = 'http://en.wikipedia.org/wiki/Western_Australia';
+
+ data.addRows([[{v:'AU-NT',f:'Northern Territory'},6,'Click to visit Wikipedia']]);
+ ivalue['AU-NT'] = 'http://en.wikipedia.org/wiki/Northern_Territory';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 6,  colors: ['#EFEDF5','#EFEDF5','#EFEDF5','#EFEDF5','#BCBDDC','#BCBDDC','#EFEDF5',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'AU',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization03'));
+  google.visualization.events.addListener(chart, 'select', function() {
+  var selection = chart.getSelection();
+  if (selection.length == 1) {
+  var selectedRow = selection[0].row;
+  var selectedRegion = data.getValue(selectedRow, 0);
+  if(ivalue[selectedRegion] != '') { window.open(ivalue[selectedRegion]);  }
+  }
+  });
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization03'></div>
+    </div>
+    <div class="description">
+ <strong>Description</strong><br>
+ Example of the Australia map that sends the user to the wikipedia page after the user clicks on one of the states.
+
+ </div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'AU-NSW',f:'New South Wales'},0,'Click to visit Wikipedia']]);
+ ivalue['AU-NSW'] = 'http://en.wikipedia.org/wiki/New_South_Wales';
+
+ data.addRows([[{v:'AU-QLD',f:'Queensland'},1,'Click to visit Wikipedia']]);
+ ivalue['AU-QLD'] = 'http://en.wikipedia.org/wiki/Queensland';
+
+ data.addRows([[{v:'AU-SA',f:'South Australia'},2,'Click to visit Wikipedia']]);
+ ivalue['AU-SA'] = 'http://en.wikipedia.org/wiki/South_Australia';
+
+ data.addRows([[{v:'AU-TAS',f:'Tasmania'},3,'Click to visit Wikipedia']]);
+ ivalue['AU-TAS'] = 'http://en.wikipedia.org/wiki/Tasmania';
+
+ data.addRows([[{v:'AU-VIC',f:'Victoria'},4,'Click to visit Wikipedia']]);
+ ivalue['AU-VIC'] = 'http://en.wikipedia.org/wiki/Victoria_(Australia)';
+
+ data.addRows([[{v:'AU-WA',f:'Western Australia'},5,'Click to visit Wikipedia']]);
+ ivalue['AU-WA'] = 'http://en.wikipedia.org/wiki/Western_Australia';
+
+ data.addRows([[{v:'AU-NT',f:'Northern Territory'},6,'Click to visit Wikipedia']]);
+ ivalue['AU-NT'] = 'http://en.wikipedia.org/wiki/Northern_Territory';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 6,  colors: ['#EFEDF5','#EFEDF5','#EFEDF5','#EFEDF5','#BCBDDC','#BCBDDC','#EFEDF5',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'AU',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+  google.visualization.events.addListener(chart, 'select', function() {
+  var selection = chart.getSelection();
+  if (selection.length == 1) {
+  var selectedRow = selection[0].row;
+  var selectedRegion = data.getValue(selectedRow, 0);
+  if(ivalue[selectedRegion] != '') { window.open(ivalue[selectedRegion]);  }
+  }
+  });
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div></textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"#FFFFFF","stroke":"0","bordercolor":"#FFFFFF","incolor":"#f5f5f5","width":"600","height":"400","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","interact":"true","areacombo":"AU,provinces","markersize":"10","displaymode":"regions","mapaction":"i_map_action_open_url_new","customaction":"","placestxt":"AU-NSW%2CNew%20South%20Wales%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/New_South_Wales%2C%23EFEDF5%3BAU-QLD%2CQueensland%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Queensland%2C%23EFEDF5%3BAU-SA%2CSouth%20Australia%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/South_Australia%2C%23EFEDF5%3BAU-TAS%2CTasmania%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Tasmania%2C%23EFEDF5%3BAU-VIC%2CVictoria%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Victoria_%28Australia%29%2C%23BCBDDC%3BAU-WA%2CWestern%20Australia%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Western_Australia%2C%23BCBDDC%3BAU-NT%2CNorthern%20Territory%2CClick%20to%20visit%20Wikipedia%2Chttp%3A//en.wikipedia.org/wiki/Northern_Territory%2C%23EFEDF5%3B"}</textarea>
+</div>
+
+    <a id ="05"></a>
+    <h2>France - Regions - Custom Action</h2>
+        <div class="map">
+        <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'FR-A',f:'Alsace'},0,'Click to change background color']]);
+ ivalue['FR-A'] = '#3182BD';
+
+ data.addRows([[{v:'FR-B',f:'Aquitaine'},1,'Click to change background color']]);
+ ivalue['FR-B'] = '#3182BD';
+
+ data.addRows([[{v:'FR-C',f:'Auvergne'},2,'Click to change background color']]);
+ ivalue['FR-C'] = '#3182BD';
+
+ data.addRows([[{v:'FR-D',f:'Bourgogne'},3,'Click to change background color']]);
+ ivalue['FR-D'] = '#3182BD';
+
+ data.addRows([[{v:'FR-E',f:'Bretagne'},4,'Click to change background color']]);
+ ivalue['FR-E'] = '#3182BD';
+
+ data.addRows([[{v:'FR-F',f:'Centre'},5,'Click to change background color']]);
+ ivalue['FR-F'] = '#3182BD';
+
+ data.addRows([[{v:'FR-G',f:'Champagne-Ardenne'},6,'Click to change background color']]);
+ ivalue['FR-G'] = '#3182BD';
+
+ data.addRows([[{v:'FR-H',f:'Corse'},7,'Click to change background color']]);
+ ivalue['FR-H'] = '#3182BD';
+
+ data.addRows([[{v:'FR-I',f:'Franche-Comte'},8,'Click to change background color']]);
+ ivalue['FR-I'] = '#3182BD';
+
+ data.addRows([[{v:'FR-J',f:'Ile-de-France'},9,'Click to change background color']]);
+ ivalue['FR-J'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-K',f:'Languedoc-Roussillon'},10,'Click to change background color']]);
+ ivalue['FR-K'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-L',f:'Limousin'},11,'Click to change background color']]);
+ ivalue['FR-L'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-M',f:'Lorraine'},12,'Click to change background color']]);
+ ivalue['FR-M'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-N',f:'Midi-Pyrenees'},13,'Click to change background color']]);
+ ivalue['FR-N'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-O',f:'Nord-Pas-de-Calais'},14,'Click to change background color']]);
+ ivalue['FR-O'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-P',f:'Basse-Normandie'},15,'Click to change background color']]);
+ ivalue['FR-P'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-Q',f:'Haute-Normandie'},16,'Click to change background color']]);
+ ivalue['FR-Q'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-R',f:'Pays de la Loire'},17,'Click to change background color']]);
+ ivalue['FR-R'] = '#DEEBF7';
+
+ data.addRows([[{v:'FR-S',f:'Picardie'},18,'Click to change background color']]);
+ ivalue['FR-S'] = '#DEEBF7';
+
+ data.addRows([[{v:'FR-T',f:'Poitou-Charentes'},19,'Click to change background color']]);
+ ivalue['FR-T'] = '#DEEBF7';
+
+ data.addRows([[{v:'FR-U',f:'Provence-Alpes-Cote d\'Azur'},20,'Click to change background color']]);
+ ivalue['FR-U'] = '#DEEBF7';
+
+ data.addRows([[{v:'FR-V',f:'Rhone-Alpes'},21,'Click to change background color']]);
+ ivalue['FR-V'] = '#DEEBF7';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 21,  colors: ['#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#DEEBF7','#DEEBF7','#DEEBF7','#DEEBF7','#DEEBF7',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'FR',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization04'));
+  google.visualization.events.addListener(chart, 'select', function() {
+  var selection = chart.getSelection();
+  if (selection.length == 1) {
+  var selectedRow = selection[0].row;
+  var selectedRegion = data.getValue(selectedRow, 0);
+  if(ivalue[selectedRegion] != '') { document.getElementsByTagName('body')[0].style.background=ivalue[selectedRegion]; }
+  }
+  });
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization04'></div>
+    </div>
+    <div class="description">
+ <strong>Description</strong><br>
+ Example of a map of France with highlighted regions and a custom action: the background color of the page will change when the user clicks one of the regions.
+
+ </div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'FR-A',f:'Alsace'},0,'Click to change background color']]);
+ ivalue['FR-A'] = '#3182BD';
+
+ data.addRows([[{v:'FR-B',f:'Aquitaine'},1,'Click to change background color']]);
+ ivalue['FR-B'] = '#3182BD';
+
+ data.addRows([[{v:'FR-C',f:'Auvergne'},2,'Click to change background color']]);
+ ivalue['FR-C'] = '#3182BD';
+
+ data.addRows([[{v:'FR-D',f:'Bourgogne'},3,'Click to change background color']]);
+ ivalue['FR-D'] = '#3182BD';
+
+ data.addRows([[{v:'FR-E',f:'Bretagne'},4,'Click to change background color']]);
+ ivalue['FR-E'] = '#3182BD';
+
+ data.addRows([[{v:'FR-F',f:'Centre'},5,'Click to change background color']]);
+ ivalue['FR-F'] = '#3182BD';
+
+ data.addRows([[{v:'FR-G',f:'Champagne-Ardenne'},6,'Click to change background color']]);
+ ivalue['FR-G'] = '#3182BD';
+
+ data.addRows([[{v:'FR-H',f:'Corse'},7,'Click to change background color']]);
+ ivalue['FR-H'] = '#3182BD';
+
+ data.addRows([[{v:'FR-I',f:'Franche-Comte'},8,'Click to change background color']]);
+ ivalue['FR-I'] = '#3182BD';
+
+ data.addRows([[{v:'FR-J',f:'Ile-de-France'},9,'Click to change background color']]);
+ ivalue['FR-J'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-K',f:'Languedoc-Roussillon'},10,'Click to change background color']]);
+ ivalue['FR-K'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-L',f:'Limousin'},11,'Click to change background color']]);
+ ivalue['FR-L'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-M',f:'Lorraine'},12,'Click to change background color']]);
+ ivalue['FR-M'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-N',f:'Midi-Pyrenees'},13,'Click to change background color']]);
+ ivalue['FR-N'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-O',f:'Nord-Pas-de-Calais'},14,'Click to change background color']]);
+ ivalue['FR-O'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-P',f:'Basse-Normandie'},15,'Click to change background color']]);
+ ivalue['FR-P'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-Q',f:'Haute-Normandie'},16,'Click to change background color']]);
+ ivalue['FR-Q'] = '#9ECAE1';
+
+ data.addRows([[{v:'FR-R',f:'Pays de la Loire'},17,'Click to change background color']]);
+ ivalue['FR-R'] = '#DEEBF7';
+
+ data.addRows([[{v:'FR-S',f:'Picardie'},18,'Click to change background color']]);
+ ivalue['FR-S'] = '#DEEBF7';
+
+ data.addRows([[{v:'FR-T',f:'Poitou-Charentes'},19,'Click to change background color']]);
+ ivalue['FR-T'] = '#DEEBF7';
+
+ data.addRows([[{v:'FR-U',f:'Provence-Alpes-Cote d\'Azur'},20,'Click to change background color']]);
+ ivalue['FR-U'] = '#DEEBF7';
+
+ data.addRows([[{v:'FR-V',f:'Rhone-Alpes'},21,'Click to change background color']]);
+ ivalue['FR-V'] = '#DEEBF7';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 21,  colors: ['#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#3182BD','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#9ECAE1','#DEEBF7','#DEEBF7','#DEEBF7','#DEEBF7','#DEEBF7',]},
+ legend: 'none',
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'FR',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+  google.visualization.events.addListener(chart, 'select', function() {
+  var selection = chart.getSelection();
+  if (selection.length == 1) {
+  var selectedRow = selection[0].row;
+  var selectedRegion = data.getValue(selectedRow, 0);
+  if(ivalue[selectedRegion] != '') { document.getElementsByTagName('body')[0].style.background=ivalue[selectedRegion]; }
+  }
+  });
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div></textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"#FFFFFF","stroke":"0","bordercolor":"#FFFFFF","incolor":"#f5f5f5","width":"600","height":"400","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","interact":"true","areacombo":"FR,provinces","markersize":"10","displaymode":"regions","mapaction":"i_map_action_custom","customaction":"document.getElementsByTagName%28%27body%27%29%5B0%5D.style.background%3Divalue%5BselectedRegion%5D%3B","placestxt":"FR-A%2CAlsace%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-B%2CAquitaine%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-C%2CAuvergne%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-D%2CBourgogne%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-E%2CBretagne%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-F%2CCentre%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-G%2CChampagne-Ardenne%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-H%2CCorse%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-I%2CFranche-Comte%2CClick%20to%20change%20background%20color%2C%233182BD%2C%233182BD%3BFR-J%2CIle-de-France%2CClick%20to%20change%20background%20color%2C%239ECAE1%2C%239ECAE1%3BFR-K%2CLanguedoc-Roussillon%2CClick%20to%20change%20background%20color%2C%239ECAE1%2C%239ECAE1%3BFR-L%2CLimousin%2CClick%20to%20change%20background%20color%2C%239ECAE1%2C%239ECAE1%3BFR-M%2CLorraine%2CClick%20to%20change%20background%20color%2C%239ECAE1%2C%239ECAE1%3BFR-N%2CMidi-Pyrenees%2CClick%20to%20change%20background%20color%2C%239ECAE1%2C%239ECAE1%3BFR-O%2CNord-Pas-de-Calais%2CClick%20to%20change%20background%20color%2C%239ECAE1%2C%239ECAE1%3BFR-P%2CBasse-Normandie%2CClick%20to%20change%20background%20color%2C%239ECAE1%2C%239ECAE1%3BFR-Q%2CHaute-Normandie%2CClick%20to%20change%20background%20color%2C%239ECAE1%2C%239ECAE1%3BFR-R%2CPays%20de%20la%20Loire%2CClick%20to%20change%20background%20color%2C%23DEEBF7%2C%23DEEBF7%3BFR-S%2CPicardie%2CClick%20to%20change%20background%20color%2C%23DEEBF7%2C%23DEEBF7%3BFR-T%2CPoitou-Charentes%2CClick%20to%20change%20background%20color%2C%23DEEBF7%2C%23DEEBF7%3BFR-U%2CProvence-Alpes-Cote%20d%27Azur%2CClick%20to%20change%20background%20color%2C%23DEEBF7%2C%23DEEBF7%3BFR-V%2CRhone-Alpes%2CClick%20to%20change%20background%20color%2C%23DEEBF7%2C%23DEEBF7%3B"}</textarea>
+</div>
+    <a id ="06"></a>
+    <h2>Germany - Markers - Custom Action</h2>
+        <div class="map">
+			<script src='https://maps.googleapis.com/maps/api/js?key=undefined' type='text/javascript'></script><script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+			<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+			<script type='text/javascript'>google.charts.load('42', {'packages':['geochart']});
+			google.charts.setOnLoadCallback(drawVisualization);
+
+			  function drawVisualization() {var data = new google.visualization.DataTable();
+
+			 data.addColumn('number', 'Lat');
+			 data.addColumn('number', 'Lon');
+			 data.addColumn('string', 'Country');
+			 data.addColumn('number', 'Value');
+			 data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+			 data.addRows([[53.553841,9.99165,'Google Hamburg',0,'Click to see details']]);
+			 ivalue['53.553841'] = '<strong>Google Hamburg</strong><br />Google Germany GmbH<br />ABC-Strasse 19<br />20354 Hamburg<br />Germany<br />Phone: +49 40-80-81-79-000<br />Fax: +49 40-4921-9194 ';
+
+			 data.addRows([[48.135124,11.581981,'Google Munich',1,'Click to see details']]);
+			 ivalue['48.135124'] = '<strong>Google Munich</strong><br />Google Germany GmbH<br />Dienerstrasse 12<br />80331 Munich<br />Germany ';
+
+			 var options = {
+			 backgroundColor: {fill:'#F0F0F0',stroke:'#FFFFFF' ,strokeWidth:0 },
+			 colorAxis:  {minValue: 0, maxValue: 1,  colors: ['#DD1812','#16A61E']},
+			 legend: 'none',
+			 datalessRegionColor: '#D6D4C7',
+			 displayMode: 'markers',
+			 enableRegionInteractivity: 'true',
+			 resolution: 'provinces',
+			 sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+			 region:'DE',
+			 keepAspectRatio: true,
+			 width:600,
+			 height:373,
+			 tooltip: {textStyle: {color: '#444444'}, trigger:'focus', isHtml: false}
+			 };
+			  var chart = new google.visualization.GeoChart(document.getElementById('map_1565269449225'));
+			  google.visualization.events.addListener(chart, 'select', function() {
+			  var selection = chart.getSelection();
+			  if (selection.length == 1) {
+			  var selectedRow = selection[0].row;
+			  var selectedRegion = data.getValue(selectedRow, 0);
+			  if(ivalue[selectedRegion] != '') { document.getElementById('message').innerHTML = ivalue[selectedRegion]; }
+			  }
+			  });
+			 chart.draw(data, options);
+			 }
+			 </script>
+			 <div id='map_1565269449225'></div>
+ <div id="message"></div>
+    </div>
+    <div class="description">
+ <strong>Description</strong><br>
+ Example of a map of Germany with markers on two cities with a custom action: on click, it will display information below the map about the map chosen.
+
+ For this example we added an extra div in the end of the embed code to display the content.</div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script src='https://maps.googleapis.com/maps/api/js?key=undefined' type='text/javascript'></script><script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+	<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+	<script type='text/javascript'>google.charts.load('42', {'packages':['geochart']});
+	google.charts.setOnLoadCallback(drawVisualization);
+
+	  function drawVisualization() {var data = new google.visualization.DataTable();
+
+	 data.addColumn('number', 'Lat');
+	 data.addColumn('number', 'Lon');
+	 data.addColumn('string', 'Country');
+	 data.addColumn('number', 'Value');
+	 data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+	 data.addRows([[53.553841,9.99165,'Google Hamburg',0,'Click to see details']]);
+	 ivalue['53.553841'] = '<strong>Google Hamburg</strong><br />Google Germany GmbH<br />ABC-Strasse 19<br />20354 Hamburg<br />Germany<br />Phone: +49 40-80-81-79-000<br />Fax: +49 40-4921-9194 ';
+
+	 data.addRows([[48.135124,11.581981,'Google Munich',1,'Click to see details']]);
+	 ivalue['48.135124'] = '<strong>Google Munich</strong><br />Google Germany GmbH<br />Dienerstrasse 12<br />80331 Munich<br />Germany ';
+
+	 var options = {
+	 backgroundColor: {fill:'#F0F0F0',stroke:'#FFFFFF' ,strokeWidth:0 },
+	 colorAxis:  {minValue: 0, maxValue: 1,  colors: ['#DD1812','#16A61E']},
+	 legend: 'none',
+	 datalessRegionColor: '#D6D4C7',
+	 displayMode: 'markers',
+	 enableRegionInteractivity: 'true',
+	 resolution: 'provinces',
+	 sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+	 region:'DE',
+	 keepAspectRatio: true,
+	 width:600,
+	 height:373,
+	 tooltip: {textStyle: {color: '#444444'}, trigger:'focus', isHtml: false}
+	 };
+	  var chart = new google.visualization.GeoChart(document.getElementById('map_1565269449225'));
+	  google.visualization.events.addListener(chart, 'select', function() {
+	  var selection = chart.getSelection();
+	  if (selection.length == 1) {
+	  var selectedRow = selection[0].row;
+	  var selectedRegion = data.getValue(selectedRow, 0);
+	  if(ivalue[selectedRegion] != '') { document.getElementById('message').innerHTML = ivalue[selectedRegion]; }
+	  }
+	  });
+	 chart.draw(data, options);
+	 }
+	 </script>
+	 <div id='map_1565269449225'></div>
+ <div id="message"></div>
+ </textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"#F0F0F0","stroke":"0","bordercolor":"#FFFFFF","incolor":"#D6D4C7","width":"600","height":"373","responsive":"false","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","tooltiphtml":"false","interact":"true","areacombo":"DE,provinces","markersize":"10","displaymode":"markers02","mapaction":"i_map_action_custom","customaction":"document.getElementById%28%27message%27%29.innerHTML%20%3D%20ivalue%5BselectedRegion%5D%3B","placestxt":"53.553841%209.991650%2CGoogle%20Hamburg%2CClick%20to%20see%20details%2C%3Cstrong%3EGoogle%20Hamburg%3C/strong%3E%3Cbr%20/%3EGoogle%20Germany%20GmbH%3Cbr%20/%3EABC-Strasse%2019%3Cbr%20/%3E20354%20Hamburg%3Cbr%20/%3EGermany%3Cbr%20/%3EPhone%3A%20+49%2040-80-81-79-000%3Cbr%20/%3EFax%3A%20+49%2040-4921-9194%20%2C%23DD1812%3B48.135124%2011.581981%2CGoogle%20Munich%2CClick%20to%20see%20details%2C%3Cstrong%3EGoogle%20Munich%3C/strong%3E%3Cbr%20/%3EGoogle%20Germany%20GmbH%3Cbr%20/%3EDienerstrasse%2012%3Cbr%20/%3E80331%20Munich%3Cbr%20/%3EGermany%20%2C%2316A61E%3B","geoapi":"undefined"}</textarea>
+</div>
+
+    <a id ="07"></a>
+    <h2>South America - Spoken Languages</h2>
+        <div class="map">
+        <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'AR',f:'Argentina'},0,'Spanish']]);
+ ivalue['AR'] = 'http://en.wikipedia.org/wiki/Spanish_language';
+
+ data.addRows([[{v:'BO',f:'Bolivia'},1,'Spanish -  Quechua - Aymara and 34 other native languages']]);
+ ivalue['BO'] = 'http://en.wikipedia.org/wiki/Languages_of_Bolivia';
+
+ data.addRows([[{v:'BR',f:'Brazil'},2,'Portuguese']]);
+ ivalue['BR'] = 'http://en.wikipedia.org/wiki/Portuguese_language';
+
+ data.addRows([[{v:'CL',f:'Chile'},3,'Spanish']]);
+ ivalue['CL'] = 'http://en.wikipedia.org/wiki/Spanish_language';
+
+ data.addRows([[{v:'CO',f:'Colombia'},4,'Spanish']]);
+ ivalue['CO'] = 'http://en.wikipedia.org/wiki/Spanish_language';
+
+ data.addRows([[{v:'EC',f:'Ecuador'},5,'Spanish']]);
+ ivalue['EC'] = 'http://en.wikipedia.org/wiki/Spanish_language';
+
+ data.addRows([[{v:'FK',f:'Falkland Islands (Malvinas)'},6,'English']]);
+ ivalue['FK'] = 'http://en.wikipedia.org/wiki/English_language';
+
+ data.addRows([[{v:'GF',f:'French Guiana'},7,'French']]);
+ ivalue['GF'] = 'http://en.wikipedia.org/wiki/French_language';
+
+ data.addRows([[{v:'GY',f:'Guyana'},8,'English']]);
+ ivalue['GY'] = 'http://en.wikipedia.org/wiki/Languages_of_Guyana';
+
+ data.addRows([[{v:'PE',f:'Peru'},9,'Spanish']]);
+ ivalue['PE'] = 'http://en.wikipedia.org/wiki/Languages_of_Peru';
+
+ data.addRows([[{v:'PY',f:'Paraguay'},10,'Spanish and Guarani']]);
+ ivalue['PY'] = 'http://en.wikipedia.org/wiki/Languages_of_Paraguay';
+
+ data.addRows([[{v:'SR',f:'Suriname'},11,'Dutch']]);
+ ivalue['SR'] = 'http://en.wikipedia.org/wiki/Suriname#Languages';
+
+ data.addRows([[{v:'UY',f:'Uruguay'},12,'Spanish']]);
+ ivalue['UY'] = 'http://en.wikipedia.org/wiki/Rioplatense_Spanish';
+
+ data.addRows([[{v:'VE',f:'Venezuela'},13,'Spanish']]);
+ ivalue['VE'] = 'http://en.wikipedia.org/wiki/Languages_of_Venezuela';
+
+ var options = {
+ backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 13,  colors: ['#A10509','#700306','#66943E','#A10509','#A10509','#A10509','#438094','#3C5AA3','#438094','#A10509','#8C0408','#D77E2E','#A10509','#A10509',]},
+ legend: 'none',
+ backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'countries',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'005',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization06'));
+  google.visualization.events.addListener(chart, 'select', function() {
+  var selection = chart.getSelection();
+  if (selection.length == 1) {
+  var selectedRow = selection[0].row;
+  var selectedRegion = data.getValue(selectedRow, 0);
+  if(ivalue[selectedRegion] != '') { window.open(ivalue[selectedRegion]);  }
+  }
+  });
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization06'></div>
+    </div>
+    <div class="description">
+ <strong>Description</strong><br>
+ Example of the South America map with countries highlighted.
+
+ </div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'AR',f:'Argentina'},0,'Spanish']]);
+ ivalue['AR'] = 'http://en.wikipedia.org/wiki/Spanish_language';
+
+ data.addRows([[{v:'BO',f:'Bolivia'},1,'Spanish -  Quechua - Aymara and 34 other native languages']]);
+ ivalue['BO'] = 'http://en.wikipedia.org/wiki/Languages_of_Bolivia';
+
+ data.addRows([[{v:'BR',f:'Brazil'},2,'Portuguese']]);
+ ivalue['BR'] = 'http://en.wikipedia.org/wiki/Portuguese_language';
+
+ data.addRows([[{v:'CL',f:'Chile'},3,'Spanish']]);
+ ivalue['CL'] = 'http://en.wikipedia.org/wiki/Spanish_language';
+
+ data.addRows([[{v:'CO',f:'Colombia'},4,'Spanish']]);
+ ivalue['CO'] = 'http://en.wikipedia.org/wiki/Spanish_language';
+
+ data.addRows([[{v:'EC',f:'Ecuador'},5,'Spanish']]);
+ ivalue['EC'] = 'http://en.wikipedia.org/wiki/Spanish_language';
+
+ data.addRows([[{v:'FK',f:'Falkland Islands (Malvinas)'},6,'English']]);
+ ivalue['FK'] = 'http://en.wikipedia.org/wiki/English_language';
+
+ data.addRows([[{v:'GF',f:'French Guiana'},7,'French']]);
+ ivalue['GF'] = 'http://en.wikipedia.org/wiki/French_language';
+
+ data.addRows([[{v:'GY',f:'Guyana'},8,'English']]);
+ ivalue['GY'] = 'http://en.wikipedia.org/wiki/Languages_of_Guyana';
+
+ data.addRows([[{v:'PE',f:'Peru'},9,'Spanish']]);
+ ivalue['PE'] = 'http://en.wikipedia.org/wiki/Languages_of_Peru';
+
+ data.addRows([[{v:'PY',f:'Paraguay'},10,'Spanish and Guarani']]);
+ ivalue['PY'] = 'http://en.wikipedia.org/wiki/Languages_of_Paraguay';
+
+ data.addRows([[{v:'SR',f:'Suriname'},11,'Dutch']]);
+ ivalue['SR'] = 'http://en.wikipedia.org/wiki/Suriname#Languages';
+
+ data.addRows([[{v:'UY',f:'Uruguay'},12,'Spanish']]);
+ ivalue['UY'] = 'http://en.wikipedia.org/wiki/Rioplatense_Spanish';
+
+ data.addRows([[{v:'VE',f:'Venezuela'},13,'Spanish']]);
+ ivalue['VE'] = 'http://en.wikipedia.org/wiki/Languages_of_Venezuela';
+
+ var options = {
+ backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 13,  colors: ['#A10509','#700306','#66943E','#A10509','#A10509','#A10509','#438094','#3C5AA3','#438094','#A10509','#8C0408','#D77E2E','#A10509','#A10509',]},
+ legend: 'none',
+ backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'countries',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'005',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+  google.visualization.events.addListener(chart, 'select', function() {
+  var selection = chart.getSelection();
+  if (selection.length == 1) {
+  var selectedRow = selection[0].row;
+  var selectedRegion = data.getValue(selectedRow, 0);
+  if(ivalue[selectedRegion] != '') { window.open(ivalue[selectedRegion]);  }
+  }
+  });
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div></textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"transparent","stroke":"0","bordercolor":"#FFFFFF","incolor":"#f5f5f5","width":"600","height":"400","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","interact":"true","areacombo":"005,countries","markersize":"10","displaymode":"regions","mapaction":"i_map_action_open_url_new","customaction":"","placestxt":"AR%2CArgentina%2CSpanish%2Chttp%3A//en.wikipedia.org/wiki/Spanish_language%2C%23A10509%3BBO%2CBolivia%2CSpanish%20-%20%20Quechua%20-%20Aymara%20and%2034%20other%20native%20languages%2Chttp%3A//en.wikipedia.org/wiki/Languages_of_Bolivia%2C%23700306%3BBR%2CBrazil%2CPortuguese%2Chttp%3A//en.wikipedia.org/wiki/Portuguese_language%2C%2366943E%3BCL%2CChile%2CSpanish%2Chttp%3A//en.wikipedia.org/wiki/Spanish_language%2C%23A10509%3BCO%2CColombia%2CSpanish%2Chttp%3A//en.wikipedia.org/wiki/Spanish_language%2C%23A10509%3BEC%2CEcuador%2CSpanish%2Chttp%3A//en.wikipedia.org/wiki/Spanish_language%2C%23A10509%3BFK%2CFalkland%20Islands%20%28Malvinas%29%2CEnglish%2Chttp%3A//en.wikipedia.org/wiki/English_language%2C%23438094%3BGF%2CFrench%20Guiana%2CFrench%2Chttp%3A//en.wikipedia.org/wiki/French_language%2C%233C5AA3%3BGY%2CGuyana%2CEnglish%2Chttp%3A//en.wikipedia.org/wiki/Languages_of_Guyana%2C%23438094%3BPE%2CPeru%2CSpanish%2Chttp%3A//en.wikipedia.org/wiki/Languages_of_Peru%2C%23A10509%3BPY%2CParaguay%2CSpanish%20and%20Guarani%2Chttp%3A//en.wikipedia.org/wiki/Languages_of_Paraguay%2C%238C0408%3BSR%2CSuriname%2CDutch%2Chttp%3A//en.wikipedia.org/wiki/Suriname%23Languages%2C%23D77E2E%3BUY%2CUruguay%2CSpanish%2Chttp%3A//en.wikipedia.org/wiki/Rioplatense_Spanish%2C%23A10509%3BVE%2CVenezuela%2CSpanish%2Chttp%3A//en.wikipedia.org/wiki/Languages_of_Venezuela%2C%23A10509%3B"}</textarea>
+</div>
+
+    <a id ="08"></a>
+    <h2>United Kingdom - Cities</h2>
+        <div class="map">
+			<script src='https://maps.googleapis.com/maps/api/js?key=undefined' type='text/javascript'></script><script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+			<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+			<script type='text/javascript'>google.charts.load('42', {'packages':['geochart']});
+			google.charts.setOnLoadCallback(drawVisualization);
+
+			  function drawVisualization() {var data = new google.visualization.DataTable();
+
+			 data.addColumn('number', 'Lat');
+			 data.addColumn('number', 'Lon');
+			 data.addColumn('string', 'Country');
+			 data.addColumn('number', 'Value');
+			 data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+			 data.addRows([[51.507351,-0.127758,'London',0,'Capital of England']]);
+			 ivalue['51.507351'] = '';
+
+			 data.addRows([[55.953251,-3.188267,'Edinburgh',1,'Capital of Scotland']]);
+			 ivalue['55.953251'] = '';
+
+			 data.addRows([[54.597286,-5.93012,'Belfast',2,'Capital of Northern Ireland']]);
+			 ivalue['54.597286'] = '';
+
+			 data.addRows([[51.481583,-3.17909,'Cardiff ',3,'Capital of Wales']]);
+			 ivalue['51.481583'] = '';
+
+			 var options = {
+			 backgroundColor: {fill:'#6EA4B8',stroke:'#FFFFFF' ,strokeWidth:0 },
+			 colorAxis:  {minValue: 0, maxValue: 3,  colors: ['#FE7C70','#FE7C70','#FE7C70','#FE7C70']},
+			 legend: 'none',
+			 datalessRegionColor: '#F4F3F0',
+			 displayMode: 'markers',
+			 enableRegionInteractivity: 'true',
+			 resolution: 'provinces',
+			 sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+			 region:'GB',
+			 keepAspectRatio: true,
+			 width:600,
+			 height:374,
+			 tooltip: {textStyle: {color: '#444444'}, trigger:'focus', isHtml: false}
+			 };
+			  var chart = new google.visualization.GeoChart(document.getElementById('map_1565269262016'));
+			 chart.draw(data, options);
+			 }
+			 </script>
+			 <div id='map_1565269262016'></div>
+    </div>
+    <div class="description">
+ <strong>Description</strong><br>
+ Example of the UK map with some markers.
+
+ </div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script src='https://maps.googleapis.com/maps/api/js?key=undefined' type='text/javascript'></script><script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+	<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+	<script type='text/javascript'>google.charts.load('42', {'packages':['geochart']});
+	google.charts.setOnLoadCallback(drawVisualization);
+
+	  function drawVisualization() {var data = new google.visualization.DataTable();
+
+	 data.addColumn('number', 'Lat');
+	 data.addColumn('number', 'Lon');
+	 data.addColumn('string', 'Country');
+	 data.addColumn('number', 'Value');
+	 data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+	 data.addRows([[51.507351,-0.127758,'London',0,'Capital of England']]);
+	 ivalue['51.507351'] = '';
+
+	 data.addRows([[55.953251,-3.188267,'Edinburgh',1,'Capital of Scotland']]);
+	 ivalue['55.953251'] = '';
+
+	 data.addRows([[54.597286,-5.93012,'Belfast',2,'Capital of Northern Ireland']]);
+	 ivalue['54.597286'] = '';
+
+	 data.addRows([[51.481583,-3.17909,'Cardiff ',3,'Capital of Wales']]);
+	 ivalue['51.481583'] = '';
+
+	 var options = {
+	 backgroundColor: {fill:'#6EA4B8',stroke:'#FFFFFF' ,strokeWidth:0 },
+	 colorAxis:  {minValue: 0, maxValue: 3,  colors: ['#FE7C70','#FE7C70','#FE7C70','#FE7C70']},
+	 legend: 'none',
+	 datalessRegionColor: '#F4F3F0',
+	 displayMode: 'markers',
+	 enableRegionInteractivity: 'true',
+	 resolution: 'provinces',
+	 sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+	 region:'GB',
+	 keepAspectRatio: true,
+	 width:600,
+	 height:374,
+	 tooltip: {textStyle: {color: '#444444'}, trigger:'focus', isHtml: false}
+	 };
+	  var chart = new google.visualization.GeoChart(document.getElementById('map_1565269262016'));
+	 chart.draw(data, options);
+	 }
+	 </script>
+	 <div id='map_1565269262016'></div></textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"#6EA4B8","stroke":"0","bordercolor":"#FFFFFF","incolor":"#F4F3F0","width":"600","height":"374","responsive":"false","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","tooltiphtml":"false","interact":"true","areacombo":"GB,provinces","markersize":"10","displaymode":"markers02","mapaction":"none","customaction":"","placestxt":"51.507351%20-0.127758%2CLondon%2CCapital%20of%20England%2C%2C%23FE7C70%3B55.953251%20-3.188267%2CEdinburgh%2CCapital%20of%20Scotland%2C%2C%23FE7C70%3B54.597286%20-5.930120%2CBelfast%2CCapital%20of%20Northern%20Ireland%2C%2C%23FE7C70%3B51.481583%20-3.179090%2CCardiff%20%2CCapital%20of%20Wales%2C%2C%23FE7C70%3B","geoapi":"undefined"}</textarea>
+</div>
+
+
+    <a id ="09"></a>
+    <h2>Europe - Cities</h2>
+        <div class="map">
+			<script src='https://maps.googleapis.com/maps/api/js?key=undefined' type='text/javascript'></script><script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+			<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+			<script type='text/javascript'>google.charts.load('42', {'packages':['geochart']});
+			google.charts.setOnLoadCallback(drawVisualization);
+
+			  function drawVisualization() {var data = new google.visualization.DataTable();
+
+			 data.addColumn('number', 'Lat');
+			 data.addColumn('number', 'Lon');
+			 data.addColumn('string', 'Country');
+			 data.addColumn('number', 'Value');
+			 data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+			 data.addRows([[38.722252,-9.139337,'LISBON',0,'Capital of Portugal']]);
+			 ivalue['38.722252'] = 'http://en.wikipedia.org/wiki/Lisbon';
+
+			 data.addRows([[40.416775,-3.70379,'MADRID',1,'Capital of Spain']]);
+			 ivalue['40.416775'] = 'http://en.wikipedia.org/wiki/Madrid';
+
+			 data.addRows([[48.856613,2.352222,'PARIS',2,'Capital of France']]);
+			 ivalue['48.856613'] = 'http://en.wikipedia.org/wiki/Paris';
+
+			 data.addRows([[51.507351,-0.127758,'LONDON',3,'Capital of England']]);
+			 ivalue['51.507351'] = 'http://en.wikipedia.org/wiki/London';
+
+			 data.addRows([[52.370216,4.895168,'AMSTERDAM',4,'Capital of the Netherlands']]);
+			 ivalue['52.370216'] = 'http://en.wikipedia.org/wiki/Amsterdam';
+
+			 data.addRows([[39.933365,32.859741,'ANKARA',5,'Capital of Turkey']]);
+			 ivalue['39.933365'] = 'http://en.wikipedia.org/wiki/Ankara';
+
+			 data.addRows([[37.98381,23.727539,'ATHENS',6,'Capital of Greece']]);
+			 ivalue['37.98381'] = 'http://en.wikipedia.org/wiki/Athens';
+
+			 data.addRows([[44.815071,20.46048,'BELGRADE',7,'Capital of Serbia']]);
+			 ivalue['44.815071'] = 'http://en.wikipedia.org/wiki/Belgrade';
+
+			 data.addRows([[52.520008,13.404954,'BERLIN',8,'Capital of Germany']]);
+			 ivalue['52.520008'] = 'http://en.wikipedia.org/wiki/Berlin';
+
+			 data.addRows([[46.948002,7.44813,'BERNE',9,'Capital of  Switzerland']]);
+			 ivalue['46.948002'] = 'http://en.wikipedia.org/wiki/Berne';
+
+			 data.addRows([[48.1464,17.10688,'BRATISLAVA',10,'Capital of Slovakia']]);
+			 ivalue['48.1464'] = 'http://en.wikipedia.org/wiki/Bratislava';
+
+			 data.addRows([[44.426765,26.102537,'BUCHAREST',11,'Capital of Romania']]);
+			 ivalue['44.426765'] = 'http://en.wikipedia.org/wiki/Bucharest';
+
+			 data.addRows([[47.497913,19.040236,'BUDAPEST',12,'Capital of Hungary']]);
+			 ivalue['47.497913'] = 'http://en.wikipedia.org/wiki/Budapest';
+
+			 var options = {
+			 backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+			 colorAxis:  {minValue: 0, maxValue: 12,  colors: ['#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094']},
+			 legend: 'none',
+			 datalessRegionColor: '#D1D1D1',
+			 displayMode: 'markers',
+			 enableRegionInteractivity: 'true',
+			 resolution: 'countries',
+			 sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+			 region:'150',
+			 keepAspectRatio: true,
+			 width:600,
+			 height:400,
+			 tooltip: {textStyle: {color: '#444444'}, trigger:'focus', isHtml: false}
+			 };
+			  var chart = new google.visualization.GeoChart(document.getElementById('map_1565269917747'));
+			 chart.draw(data, options);
+			 }
+			 </script>
+			 <div id='map_1565269917747'></div>
+    </div>
+    <div class="description">
+ <strong>Description</strong><br>
+ Example of the map of Europe with marker on some capital cities.</div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script src='https://maps.googleapis.com/maps/api/js?key=undefined' type='text/javascript'></script><script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+	<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+	<script type='text/javascript'>google.charts.load('42', {'packages':['geochart']});
+	google.charts.setOnLoadCallback(drawVisualization);
+
+	  function drawVisualization() {var data = new google.visualization.DataTable();
+
+	 data.addColumn('number', 'Lat');
+	 data.addColumn('number', 'Lon');
+	 data.addColumn('string', 'Country');
+	 data.addColumn('number', 'Value');
+	 data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+	 data.addRows([[38.722252,-9.139337,'LISBON',0,'Capital of Portugal']]);
+	 ivalue['38.722252'] = 'http://en.wikipedia.org/wiki/Lisbon';
+
+	 data.addRows([[40.416775,-3.70379,'MADRID',1,'Capital of Spain']]);
+	 ivalue['40.416775'] = 'http://en.wikipedia.org/wiki/Madrid';
+
+	 data.addRows([[48.856613,2.352222,'PARIS',2,'Capital of France']]);
+	 ivalue['48.856613'] = 'http://en.wikipedia.org/wiki/Paris';
+
+	 data.addRows([[51.507351,-0.127758,'LONDON',3,'Capital of England']]);
+	 ivalue['51.507351'] = 'http://en.wikipedia.org/wiki/London';
+
+	 data.addRows([[52.370216,4.895168,'AMSTERDAM',4,'Capital of the Netherlands']]);
+	 ivalue['52.370216'] = 'http://en.wikipedia.org/wiki/Amsterdam';
+
+	 data.addRows([[39.933365,32.859741,'ANKARA',5,'Capital of Turkey']]);
+	 ivalue['39.933365'] = 'http://en.wikipedia.org/wiki/Ankara';
+
+	 data.addRows([[37.98381,23.727539,'ATHENS',6,'Capital of Greece']]);
+	 ivalue['37.98381'] = 'http://en.wikipedia.org/wiki/Athens';
+
+	 data.addRows([[44.815071,20.46048,'BELGRADE',7,'Capital of Serbia']]);
+	 ivalue['44.815071'] = 'http://en.wikipedia.org/wiki/Belgrade';
+
+	 data.addRows([[52.520008,13.404954,'BERLIN',8,'Capital of Germany']]);
+	 ivalue['52.520008'] = 'http://en.wikipedia.org/wiki/Berlin';
+
+	 data.addRows([[46.948002,7.44813,'BERNE',9,'Capital of  Switzerland']]);
+	 ivalue['46.948002'] = 'http://en.wikipedia.org/wiki/Berne';
+
+	 data.addRows([[48.1464,17.10688,'BRATISLAVA',10,'Capital of Slovakia']]);
+	 ivalue['48.1464'] = 'http://en.wikipedia.org/wiki/Bratislava';
+
+	 data.addRows([[44.426765,26.102537,'BUCHAREST',11,'Capital of Romania']]);
+	 ivalue['44.426765'] = 'http://en.wikipedia.org/wiki/Bucharest';
+
+	 data.addRows([[47.497913,19.040236,'BUDAPEST',12,'Capital of Hungary']]);
+	 ivalue['47.497913'] = 'http://en.wikipedia.org/wiki/Budapest';
+
+	 var options = {
+	 backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+	 colorAxis:  {minValue: 0, maxValue: 12,  colors: ['#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094','#438094']},
+	 legend: 'none',
+	 datalessRegionColor: '#D1D1D1',
+	 displayMode: 'markers',
+	 enableRegionInteractivity: 'true',
+	 resolution: 'countries',
+	 sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+	 region:'150',
+	 keepAspectRatio: true,
+	 width:600,
+	 height:400,
+	 tooltip: {textStyle: {color: '#444444'}, trigger:'focus', isHtml: false}
+	 };
+	  var chart = new google.visualization.GeoChart(document.getElementById('map_1565269917747'));
+	 chart.draw(data, options);
+	 }
+	 </script>
+	 <div id='map_1565269917747'></div></textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"#FFFFFF","stroke":"0","bordercolor":"#FFFFFF","incolor":"#D1D1D1","width":"600","height":"400","responsive":"false","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","tooltiphtml":"false","interact":"true","areacombo":"150,countries","markersize":"5","displaymode":"markers02","mapaction":"none","customaction":"","placestxt":"38.722252%20-9.139337%2CLISBON%2CCapital%20of%20Portugal%2Chttp%3A//en.wikipedia.org/wiki/Lisbon%2C%23438094%3B40.416775%20-3.703790%2CMADRID%2CCapital%20of%20Spain%2Chttp%3A//en.wikipedia.org/wiki/Madrid%2C%23438094%3B48.856613%202.352222%2CPARIS%2CCapital%20of%20France%2Chttp%3A//en.wikipedia.org/wiki/Paris%2C%23438094%3B51.507351%20-0.127758%2CLONDON%2CCapital%20of%20England%2Chttp%3A//en.wikipedia.org/wiki/London%2C%23438094%3B52.370216%204.895168%2CAMSTERDAM%2CCapital%20of%20the%20Netherlands%2Chttp%3A//en.wikipedia.org/wiki/Amsterdam%2C%23438094%3B39.933365%2032.859741%2CANKARA%2CCapital%20of%20Turkey%2Chttp%3A//en.wikipedia.org/wiki/Ankara%2C%23438094%3B37.983810%2023.727539%2CATHENS%2CCapital%20of%20Greece%2Chttp%3A//en.wikipedia.org/wiki/Athens%2C%23438094%3B44.815071%2020.460480%2CBELGRADE%2CCapital%20of%20Serbia%2Chttp%3A//en.wikipedia.org/wiki/Belgrade%2C%23438094%3B52.520008%2013.404954%2CBERLIN%2CCapital%20of%20Germany%2Chttp%3A//en.wikipedia.org/wiki/Berlin%2C%23438094%3B46.948002%207.448130%2CBERNE%2CCapital%20of%20%20Switzerland%2Chttp%3A//en.wikipedia.org/wiki/Berne%2C%23438094%3B48.146400%2017.106880%2CBRATISLAVA%2CCapital%20of%20Slovakia%2Chttp%3A//en.wikipedia.org/wiki/Bratislava%2C%23438094%3B44.426765%2026.102537%2CBUCHAREST%2CCapital%20of%20Romania%2Chttp%3A//en.wikipedia.org/wiki/Bucharest%2C%23438094%3B47.497913%2019.040236%2CBUDAPEST%2CCapital%20of%20Hungary%2Chttp%3A//en.wikipedia.org/wiki/Budapest%2C%23438094%3B","geoapi":"undefined"}</textarea>
+</div>
+
+    <a id ="10"></a>
+    <h2>Brazil - Regions</h2>
+        <div class="map">
+        <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'BR-AC',f:'Acre'},0,'Exemplo de Informação']]);
+ ivalue['BR-AC'] = '';
+
+ data.addRows([[{v:'BR-AL',f:'Alagoas'},1,'Exemplo de Informação']]);
+ ivalue['BR-AL'] = '';
+
+ data.addRows([[{v:'BR-AM',f:'Amazonas'},2,'Exemplo de Informação']]);
+ ivalue['BR-AM'] = '';
+
+ data.addRows([[{v:'BR-AP',f:'Amapá'},3,'Exemplo de Informação']]);
+ ivalue['BR-AP'] = '';
+
+ data.addRows([[{v:'BR-BA',f:'Bahia'},4,'Exemplo de Informação']]);
+ ivalue['BR-BA'] = '';
+
+ data.addRows([[{v:'BR-CE',f:'Ceará'},5,'Exemplo de Informação']]);
+ ivalue['BR-CE'] = '';
+
+ data.addRows([[{v:'BR-DF',f:'Distrito Federal'},6,'Exemplo de Informação']]);
+ ivalue['BR-DF'] = '';
+
+ data.addRows([[{v:'BR-ES',f:'Espírito Santo'},7,'Exemplo de Informação']]);
+ ivalue['BR-ES'] = '';
+
+ data.addRows([[{v:'BR-GO',f:'Goiás'},8,'Exemplo de Informação']]);
+ ivalue['BR-GO'] = '';
+
+ data.addRows([[{v:'BR-MA',f:'Maranhão'},9,'Exemplo de Informação']]);
+ ivalue['BR-MA'] = '';
+
+ data.addRows([[{v:'BR-MG',f:'Minas Gerais'},10,'Exemplo de Informação']]);
+ ivalue['BR-MG'] = '';
+
+ data.addRows([[{v:'BR-MS',f:'Mato Grosso do Sul'},11,'Exemplo de Informação']]);
+ ivalue['BR-MS'] = '';
+
+ data.addRows([[{v:'BR-MT',f:'Mato Grosso'},12,'Exemplo de Informação']]);
+ ivalue['BR-MT'] = '';
+
+ data.addRows([[{v:'BR-PA',f:'Pará'},13,'Exemplo de Informação']]);
+ ivalue['BR-PA'] = '';
+
+ data.addRows([[{v:'BR-PB',f:'Paraíba'},14,'Exemplo de Informação']]);
+ ivalue['BR-PB'] = '';
+
+ data.addRows([[{v:'BR-PE',f:'Pernambuco'},15,'Exemplo de Informação']]);
+ ivalue['BR-PE'] = '';
+
+ data.addRows([[{v:'BR-PI',f:'Piauí'},16,'Exemplo de Informação']]);
+ ivalue['BR-PI'] = '';
+
+ data.addRows([[{v:'BR-PR',f:'Paraná'},17,'Exemplo de Informação']]);
+ ivalue['BR-PR'] = '';
+
+ data.addRows([[{v:'BR-RJ',f:'Rio de Janeiro'},18,'Exemplo de Informação']]);
+ ivalue['BR-RJ'] = '';
+
+ data.addRows([[{v:'BR-RN',f:'Rio Grande do Norte'},19,'Exemplo de Informação']]);
+ ivalue['BR-RN'] = '';
+
+ data.addRows([[{v:'BR-RO',f:'Rondônia'},20,'Exemplo de Informação']]);
+ ivalue['BR-RO'] = '';
+
+ data.addRows([[{v:'BR-RR',f:'Roraima'},21,'Exemplo de Informação']]);
+ ivalue['BR-RR'] = '';
+
+ data.addRows([[{v:'BR-RS',f:'Rio Grande do Sul'},22,'Exemplo de Informação']]);
+ ivalue['BR-RS'] = '';
+
+ data.addRows([[{v:'BR-SC',f:'Santa Catarina'},23,'Exemplo de Informação']]);
+ ivalue['BR-SC'] = '';
+
+ data.addRows([[{v:'BR-SE',f:'Sergipe'},24,'Exemplo de Informação']]);
+ ivalue['BR-SE'] = '';
+
+ data.addRows([[{v:'BR-SP',f:'São Paulo'},25,'Exemplo de Informação']]);
+ ivalue['BR-SP'] = '';
+
+ data.addRows([[{v:'BR-TO',f:'Tocantins'},26,'Exemplo de Informação']]);
+ ivalue['BR-TO'] = '';
+
+ var options = {
+ backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 26,  colors: ['#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354',]},
+ legend: 'none',
+ backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'BR',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization09'));
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization09'></div>
+    </div>
+    <div class="description">
+ <strong>Description</strong><br>
+ Example of a map from Brazil divided by regions.
+
+ </div>
+
+  <div class="embedcode"> <strong>Embed Code</strong>
+ <textarea  onFocus="this.select()"><script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value');
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'BR-AC',f:'Acre'},0,'Exemplo de Informação']]);
+ ivalue['BR-AC'] = '';
+
+ data.addRows([[{v:'BR-AL',f:'Alagoas'},1,'Exemplo de Informação']]);
+ ivalue['BR-AL'] = '';
+
+ data.addRows([[{v:'BR-AM',f:'Amazonas'},2,'Exemplo de Informação']]);
+ ivalue['BR-AM'] = '';
+
+ data.addRows([[{v:'BR-AP',f:'Amapá'},3,'Exemplo de Informação']]);
+ ivalue['BR-AP'] = '';
+
+ data.addRows([[{v:'BR-BA',f:'Bahia'},4,'Exemplo de Informação']]);
+ ivalue['BR-BA'] = '';
+
+ data.addRows([[{v:'BR-CE',f:'Ceará'},5,'Exemplo de Informação']]);
+ ivalue['BR-CE'] = '';
+
+ data.addRows([[{v:'BR-DF',f:'Distrito Federal'},6,'Exemplo de Informação']]);
+ ivalue['BR-DF'] = '';
+
+ data.addRows([[{v:'BR-ES',f:'Espírito Santo'},7,'Exemplo de Informação']]);
+ ivalue['BR-ES'] = '';
+
+ data.addRows([[{v:'BR-GO',f:'Goiás'},8,'Exemplo de Informação']]);
+ ivalue['BR-GO'] = '';
+
+ data.addRows([[{v:'BR-MA',f:'Maranhão'},9,'Exemplo de Informação']]);
+ ivalue['BR-MA'] = '';
+
+ data.addRows([[{v:'BR-MG',f:'Minas Gerais'},10,'Exemplo de Informação']]);
+ ivalue['BR-MG'] = '';
+
+ data.addRows([[{v:'BR-MS',f:'Mato Grosso do Sul'},11,'Exemplo de Informação']]);
+ ivalue['BR-MS'] = '';
+
+ data.addRows([[{v:'BR-MT',f:'Mato Grosso'},12,'Exemplo de Informação']]);
+ ivalue['BR-MT'] = '';
+
+ data.addRows([[{v:'BR-PA',f:'Pará'},13,'Exemplo de Informação']]);
+ ivalue['BR-PA'] = '';
+
+ data.addRows([[{v:'BR-PB',f:'Paraíba'},14,'Exemplo de Informação']]);
+ ivalue['BR-PB'] = '';
+
+ data.addRows([[{v:'BR-PE',f:'Pernambuco'},15,'Exemplo de Informação']]);
+ ivalue['BR-PE'] = '';
+
+ data.addRows([[{v:'BR-PI',f:'Piauí'},16,'Exemplo de Informação']]);
+ ivalue['BR-PI'] = '';
+
+ data.addRows([[{v:'BR-PR',f:'Paraná'},17,'Exemplo de Informação']]);
+ ivalue['BR-PR'] = '';
+
+ data.addRows([[{v:'BR-RJ',f:'Rio de Janeiro'},18,'Exemplo de Informação']]);
+ ivalue['BR-RJ'] = '';
+
+ data.addRows([[{v:'BR-RN',f:'Rio Grande do Norte'},19,'Exemplo de Informação']]);
+ ivalue['BR-RN'] = '';
+
+ data.addRows([[{v:'BR-RO',f:'Rondônia'},20,'Exemplo de Informação']]);
+ ivalue['BR-RO'] = '';
+
+ data.addRows([[{v:'BR-RR',f:'Roraima'},21,'Exemplo de Informação']]);
+ ivalue['BR-RR'] = '';
+
+ data.addRows([[{v:'BR-RS',f:'Rio Grande do Sul'},22,'Exemplo de Informação']]);
+ ivalue['BR-RS'] = '';
+
+ data.addRows([[{v:'BR-SC',f:'Santa Catarina'},23,'Exemplo de Informação']]);
+ ivalue['BR-SC'] = '';
+
+ data.addRows([[{v:'BR-SE',f:'Sergipe'},24,'Exemplo de Informação']]);
+ ivalue['BR-SE'] = '';
+
+ data.addRows([[{v:'BR-SP',f:'São Paulo'},25,'Exemplo de Informação']]);
+ ivalue['BR-SP'] = '';
+
+ data.addRows([[{v:'BR-TO',f:'Tocantins'},26,'Exemplo de Informação']]);
+ ivalue['BR-TO'] = '';
+
+ var options = {
+ backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 26,  colors: ['#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#E5F5E0','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#A1D99B','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354','#31A354',]},
+ legend: 'none',
+ backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions',
+ enableRegionInteractivity: 'true',
+ resolution: 'provinces',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'BR',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div></textarea>
+</div>
+
+<div class="settingscode"><strong>Settings Code to use in Generator</strong>
+ <div class="iwmsmall">You can copy this settings and load them on the <a href="index.html">Generator</a> to edit the map with your own settings</div>
+ <textarea  onFocus="this.select()">{"bgcolor":"transparent","stroke":"0","bordercolor":"#FFFFFF","incolor":"#f5f5f5","width":"600","height":"400","aspratio":"true","tooltipcolor":"#444444","tooltip":"focus","interact":"true","areacombo":"BR,provinces","markersize":"10","displaymode":"regions","mapaction":"none","customaction":"","placestxt":"BR-AC%2CAcre%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23E5F5E0%3BBR-AL%2CAlagoas%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23E5F5E0%3BBR-AM%2CAmazonas%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23E5F5E0%3BBR-AP%2CAmap%E1%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23E5F5E0%3BBR-BA%2CBahia%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23E5F5E0%3BBR-CE%2CCear%E1%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23E5F5E0%3BBR-DF%2CDistrito%20Federal%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23E5F5E0%3BBR-ES%2CEsp%EDrito%20Santo%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23E5F5E0%3BBR-GO%2CGoi%E1s%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-MA%2CMaranh%E3o%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-MG%2CMinas%20Gerais%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-MS%2CMato%20Grosso%20do%20Sul%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-MT%2CMato%20Grosso%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-PA%2CPar%E1%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-PB%2CPara%EDba%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-PE%2CPernambuco%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-PI%2CPiau%ED%2CExemplo%20de%20Informa%E7%E3o%2C%2C%23A1D99B%3BBR-PR%2CParan%E1%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-RJ%2CRio%20de%20Janeiro%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-RN%2CRio%20Grande%20do%20Norte%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-RO%2CRond%F4nia%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-RR%2CRoraima%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-RS%2CRio%20Grande%20do%20Sul%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-SC%2CSanta%20Catarina%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-SE%2CSergipe%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-SP%2CS%E3o%20Paulo%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3BBR-TO%2CTocantins%2CExemplo%20de%20Informa%E7%E3o%2C%2C%2331A354%3B"}</textarea>
+</div>
+
+
+
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+
+<footer>Application Developed By <a href="http://cmoreira.net" target="_blank">CMoreira</a> using <a href="https://developers.google.com/chart/interactive/docs/gallery/geochart" target="_blank">Google Geochart API</a></footer>
+</body>
+</html>
